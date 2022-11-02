@@ -5,12 +5,12 @@ rulebase = {
     
     },
     2: {
-        "rule_format": "seatmatrix_degree_course_college",
-        "rule_handler": "get_seatmatrix_for_degree_in_college",
+        "rule_format": "_degree_course_college",
+        "rule_handler": "get_seatmatrix_for_degree_in_college"
         #DIFFERENT METHODS TO GET :- 1.TOTAL SEATS; 2.CATEGORY WISE SEATS; 3.
     }
 #     3: {
-#         "rule_format": "degree_course_college_",
+#         "rule_format": "_",
 #         "rule_handler": "get_seatmatrix_courses_for_degree_in_college",
         
 #     }

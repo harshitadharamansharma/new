@@ -22,4 +22,6 @@ graph LR
 
     D2 --> |in| F2(Faculty)
     F2 --> |in| COL7(College)
+
+    
 ```
