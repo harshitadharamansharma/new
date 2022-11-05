@@ -1,4 +1,5 @@
 synonyms = {
+
     "BSc": ["bsc", "bachelor of sciences", "bachelor of science", "B Sc"," bsc"],
     "BA": ["ba", "bachelor of arts", "bachelor of art", "b a"],
     "Economics": ["economics", "economic", "economy"],
@@ -20,5 +21,6 @@ synonyms = {
     "French": ["french"], 
     "German": ["german"],
     "Italian": ["italian"], 
-    "Spanish": ["spanish"] 
+    "Spanish": ["spanish"],
+    
 }
