@@ -25,8 +25,7 @@
 rulebase = {
     1: {
         "rule_format": "quantifier_college",
-        "rule_handler": "get_number_of_colleges_in_university"
-    
+        "rule_handler": "get_number_of_colleges_in_university"   
     },
     2: {
         "rule_format": "quantifier_faculty",

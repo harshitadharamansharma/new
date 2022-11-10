@@ -11,9 +11,9 @@ synonyms = {
     "EWS": ["economically weaker section", "ews"],
     "Minority": ["minority"],
     "Course": ["course"],
-    "Hindi": [ "hindi", ("hin")],
-    "English": ["english", ("eng", "englis", "engl")],
-    "Sanskrit": ["sanskrit", ("Sans")],
+    "Hindi": [ "hindi"], 
+    "English": ["english"],
+    "Sanskrit": ["sanskrit"],
     "Punjabi": ["punjabi"],
     "Bengali": ["bengali"],
     "Urdu": ["urdu"],
@@ -22,5 +22,7 @@ synonyms = {
     "German": ["german"],
     "Italian": ["italian"], 
     "Spanish": ["spanish"],
+     
+    
     
 }

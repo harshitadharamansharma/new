@@ -1,9 +1,9 @@
 keyword_classes = {
-    "entities": {"Course"},
+    # "entities": {"Course"},
     "quantifier":{"How many", "how much", "What are the numbers", "what are the no.", "get me the numbers", },    
     "show":{"list","details"},
-    "degree": {"BA", "BSc"},
-    "degreetype": {"Honours", "programme"},
+    # "degree": {"BA", "BSc"},
+    # "degreetype": {"Honours", "programme"},
     #vocational; diploma
     "course": {"Economics", "History", "English", "Sanskrit", "Hindi", "Punjabi", "Bengali", "Urdu", "Arabic", "Persian", "French", "German", "Hindi", "Italian", "Spanish" }, 
     # , ("Applied Psychoogy","Psychology"), "Philosophy", ("Hindi Patrakarita"),
@@ -12,10 +12,11 @@ keyword_classes = {
     "faculty": {"Arts", "Applied Social Sciences and Humanities", "Commerce and Business Studies", "Education" },
     "seats": {"total"},
     "department": {""},
-    "coursefee": {""},
-    "eligibility": {""},
-    "duration": {""},
-    "syllabus" : {""},
+    # "coursefee": {""},
+    # "eligibility": {""},
+    # "duration": {""},
+    # "syllabus" : {""},
     "details" : {"cutoff", "coursefee", "eligibility", "duration", "syllabus"},
+    "c"
     
 }
