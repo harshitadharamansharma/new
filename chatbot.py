@@ -5,8 +5,8 @@ from config import config
 from preprocessing import query_preprocessor
 from utils import bot_print, bot_print_with_name
 from utils import bot_input_with_name, user_input_with_name
-from utils import get_keyword_classes_from_query
-from rule_handler import next_rule, call_rulehandler
+from utils import get_keyword_classes_from_query, get_keyword_dictionary_from_query
+#from rule_handler import next_rule, call_rulehandler
 
 def show_greeting():
 
@@ -49,10 +49,13 @@ def chat():
     while continue_chat_flag == True:
 
         query = get_user_query(user_name)
-        keyword_classes = get_keyword_classes_from_query(query)
-        print(keyword_classes)
+        # keyword_classes = get_keyword_classes_from_query(query)
+        # print(keyword_classes)
 
-        call_rulehandler(keyword_classes)
+        keyword_dictionary = get_keyword_dictionary_from_query(query)
+        print(keyword_dictionary)
+        # call_rulehandler(keyword_dictionary)
+        
 
     return 0
 
