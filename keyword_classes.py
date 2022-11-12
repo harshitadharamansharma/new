@@ -1,10 +1,10 @@
 keyword_classes = {
     # "entities": {"Course"},
-    "quantifier": {"number"},    
-    "show": {"list", "details"}, 
-    "degree": {"BA", "BSc"},
+    "quantifier": {"Number"},    
+    "show": {"lLst", "Details"}, 
+    "degree": {"BA", "BSc"}, 
     # "degreetype": {"Honours", "programme"}, #vocational; diploma
-    "course": {"Economics", "History", "English", "Sanskrit", "Hindi", "Punjabi", "Bengali", "Urdu", "Arabic", "Persian", "French", "German", "Hindi", "Italian", "Spanish" }, 
+    "course": {"Economics", "History", "English", "Sanskrit", "Hindi", "Punjabi", "Bengali", "Urdu", "Arabic", "Persian", "French", "German", "Hindi", "Italian", "Spanish" },  # to be discussed ( deprtment / faculty / course name )
     # , ("Applied Psychoogy","Psychology"), "Philosophy", ("Hindi Patrakarita"),
     "category": {"General", "SC", "ST", "OBC", "Minority", "EWS"},
     "college": {"Acharya Narendra Dev College","Aditi Mahavidyalaya(W)", "Aryabhatta College", "Atma Ram Sanatan Dharma College", "Bhagini Nivedita College", "Bharati College"},

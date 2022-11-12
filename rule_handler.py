@@ -13,14 +13,31 @@
     #         if sh_kw in keyword_classes[key]:
     #             shortlisted_keyword_classes.append(key) 
 
+#2. return true 
+#3. for query_results = get_number_of_colleges_in_university(), insted you can call rulebase["""""what should be here"]["rule_handler"] 
+
 
 from synonyms import synonyms
 from rulebase import rulebase
 from utils import bot_confirmation_prompt, bot_print_with_name, bot_print
+from rulebase import rulebase
+
+# def next_rule():
+    # import json 
+#change rulebase.py to rulebase.json?  treat it as nested dictionary
+
+def next_rule(query_dict):
+    for n in rulebase.items(): 
+        rule_list = list(rulebase[n]["rule_format"])
+
+    for rule in rule_list:
+        a = rule(query_dict)
+        if a is True:
+            break
 
 
-def next_rule():
-    pass
+
+# in rulehandler return true at the end of all the rule definition
 
 
 # def call_rulehandler(kw_c): 
@@ -46,6 +63,7 @@ def quantifier_college(query_dict):
             query_results = get_number_of_colleges_in_university()
             generated_response = "There are " + str(query_results) + " colleges affiliated by the University."  
             bot_print_with_name (generated_response)
+    return True
 
 
 
@@ -62,7 +80,7 @@ def quantifier_faculty(query_dict):
             query_results = get_number_of_faculties_in_university()
             generated_response = "There are " + str(query_results) + " colleges faculties in the University"  
             bot_print_with_name (generated_response)
-
+    return True
 
 
 
@@ -78,7 +96,7 @@ def quantifier_department(query_dict):
             query_results = get_number_of_departments_in_university()
             generated_response = "There are " + str(query_results) + " colleges departments in the University"  
             bot_print_with_name (generated_response)
-
+    return True
 
 
 
@@ -94,7 +112,7 @@ def quantifier_course(query_dict):
             query_results = get_number_of_courses_in_university()
             generated_response = "There are " + str(query_results) + " courses in the University"  
             bot_print_with_name (generated_response)
-
+    return True
 
 # def quantifier_faculty_college(kw_c):
 #     rule_list=['faculty','college']
@@ -114,7 +132,7 @@ def quantifier_faculty_college(query_dict):
             generated_response = "There are " + str(query_results) + " number of faulties at " + college
             bot_print_with_name (generated_response)
             # bot_print_with_name ( "There are " + str(query_result) + "number of faulties at " + college)                   #"Number of faculties in " + college + "are"
- 
+    return True
  
 
 
@@ -129,7 +147,7 @@ def quantifier_seats_course_college(query_dict):
             query_results = get_total_number_of_seats_for_course_at_college(course,college)
             generated_response = "There are " + str(query_results) + " total seats in "+ course + " at " + college
             bot_print_with_name (generated_response)
-
+    return True
 
 
 
@@ -146,7 +164,7 @@ def  quantifier_seats_category_course_college(query_dict):
             generated_response = "There are " + str(query_results) + " seats for " + category + " in " + course + " at " + college
             bot_print_with_name (generated_response)
         # get_number_of_seats_for_category_for_course_at_college(seats,category,course,college)
-
+    return True
 
 
 def quantifier_course_college(query_dict):
@@ -158,7 +176,7 @@ def quantifier_course_college(query_dict):
             query_results = get_number_of_courses_at_college(college)
             generated_response = "There are " + str(query_results) + " courses at " + college
             bot_print_with_name (generated_response)
-
+    return True
 
 def quantifier_course_faculty(query_dict):
     rule_list=['course','faculty']
@@ -170,7 +188,7 @@ def quantifier_course_faculty(query_dict):
             generated_response = "There are " + str(query_results) + " courses offered by " + faculty
             bot_print_with_name (generated_response)
         # get_number_of_courses_in_faculty(course,faculty)
-
+    return True
 
 def quantifier_course_department(query_dict):
     rule_list=['course','department']
@@ -181,7 +199,7 @@ def quantifier_course_department(query_dict):
             query_results = get_number_of_courses_in_department(department)
             generated_response = "There are " + str(query_results) + " courses offered by " + department
             bot_print_with_name (generated_response)   
-
+    return True
 
 
 def quantifier_course_department_college(query_dict):
@@ -195,5 +213,4 @@ def quantifier_course_department_college(query_dict):
             generated_response = "There are " + str(query_results) + " courses offered by " + department + " at " + college
             bot_print_with_name (generated_response)      
             # get_number_of_courses_in_department_at_college(department,college)
-
-
+    return True

@@ -4,8 +4,9 @@ synonyms = {
     "BA": ["ba", "bachelor of arts", "bachelor of art", "b a"],
     "Economics": ["economics", "economic", "economy"],
     "History": ["history"],
-    ""
-
+    "Number": ["number" , "how many", "how much", "what are the number", "what are the no.", "get me the number"],
+    "List": ["list", "names", "name", "what", " what are"], #why plural we are using the lem and for spell
+    "Details": [""],
     # "Seat Matrix": ["seat", "seat matrix", "seat allocation", "allocation", "seats", "seats", "seats"],
     "General": ["genr", "gen", "general", "ur", "unreserved"],
     "SC": ["sc", "scheduled cast", "scheduled caste", "schedule cast", "schedule caste"],

@@ -20,16 +20,17 @@
 # #     }
 # }
 
-
+#1 remove "" quotes ? 
+import rule_handler 
 
 rulebase = {
     1: {
-        "rule_format": "quantifier_college",
-        "rule_handler": "get_number_of_colleges_in_university"   
+        "rule_format": quantifier_college,
+        "rule_handler": get_number_of_colleges_in_university   
     },
     2: {
-        "rule_format": "quantifier_faculty",
-        "rule_handler": "get_number_of_faculties_in_university"
+        "rule_format": quantifier_faculty,
+        "rule_handler": get_number_of_faculties_in_university
     },
     3: {
         "rule_format": "quantifier_department",
