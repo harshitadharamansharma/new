@@ -153,7 +153,6 @@ def quantifier_seats_course_college(query_dict):
 
 
 def  quantifier_seats_category_course_college(query_dict):
-    rule_list=['seats','category','course','college']
     if all(value in query_dict.keys() for value in rule_list):
         college = query_dict['college']
         course = query_dict['course']
@@ -168,14 +167,12 @@ def  quantifier_seats_category_course_college(query_dict):
 
 
 def quantifier_course_college(query_dict):
-    rule_list=['course','college']
-    if all(value in query_dict.keys() for value in rule_list):
-        college = query_dict['college']
-        message_for_query_to_be_searched = " number of courses at " + college
-        if bot_confirmation_prompt(message_for_query_to_be_searched):
-            query_results = get_number_of_courses_at_college(college)
-            generated_response = "There are " + str(query_results) + " courses at " + college
-            bot_print_with_name (generated_response)
+    college = query_dict['college']
+    message_for_query_to_be_searched = " number of courses at " + college
+    if bot_confirmation_prompt(message_for_query_to_be_searched):
+        query_results = get_number_of_courses_at_college(college)
+        generated_response = "There are " + str(query_results) + " courses at " + college
+        bot_print_with_name (generated_response)
     return True
 
 def quantifier_course_faculty(query_dict):
