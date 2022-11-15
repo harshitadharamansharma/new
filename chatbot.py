@@ -6,7 +6,7 @@ from preprocessing import query_preprocessor
 from utils import bot_print, bot_print_with_name
 from utils import bot_input_with_name, user_input_with_name
 from utils import get_keyword_classes_from_query, get_keyword_dictionary_from_query
-#from rule_handler import next_rule, call_rulehandler
+# from rule_handlers import *
 
 def show_greeting():
 
@@ -55,6 +55,8 @@ def chat():
         keyword_dictionary = get_keyword_dictionary_from_query(query)
         print(keyword_dictionary)
         # call_rulehandler(keyword_dictionary)
+
+        # next_rule(keyword_dictionary)
         
 
     return 0
@@ -63,5 +65,5 @@ def chat():
 if __name__ == "__main__":
 
     config["TAB_WIDTH"] = " " * (len(config["BOT_NAME"]) + 2)
+    # karan()
     chat()
-

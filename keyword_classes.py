@@ -2,7 +2,10 @@
 keyword_classes = {
  
     # "entities": {"Course"},
- 
+
+    # filled _ slots = keyword classes with values provided by the users e.g college = ARSD
+    #  keywords with respect to values are required   = no. of colleges ?
+
     "quantifier": {"Number"},    
     "show": {"list", "Details"},
     # "details" : {"eligibility", "duration", "syllabus", "cutoff", "coursefee"},
@@ -17,6 +20,7 @@ keyword_classes = {
     # , ("Applied Psychoogy","Psychology"), "Philosophy", ("Hindi Patrakarita"),
     "seats": {"seats", "seat"},#{"total", "category wise"},
     "category": {"General", "SC", "ST", "OBC", "Minority", "EWS"},
+
 
     # "details" : {"eligibility", "duration", "syllabus", "cutoff", "coursefee"},
     "eligibility":{} ,

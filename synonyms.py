@@ -22,7 +22,7 @@ synonyms = {
     "Bengali": ["bengali"],
     "Urdu": ["urdu"],
     "Arabic": ["arabic"],
-    "Persian": ["Persian"],
+    "Persian": ["persian"],
     "French": ["french"], 
     "German": ["german"],
     "Italian": ["italian"], 
@@ -64,9 +64,9 @@ synonyms = {
     "Department of Sanskrit": [], 
     "Department of Punjabi": [], 
     "Department of Urdu": [], 
-    "Department of Buddhist Studies": []
+    "Department of Buddhist Studies": [],
 
-
+    "college": [ "clg", "college", "colleg", "collg", "college"]
 
    
 }

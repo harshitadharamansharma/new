@@ -96,7 +96,7 @@ def get_keyword_dictionary_from_query(query):
     #         break
  
     query_dict = dict(zip(shortlisted_keyword_classes,shortlisted_keywords))
-
+    print(query_dict)
     return query_dict
 
 

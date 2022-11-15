@@ -1,12 +1,15 @@
 from synonyms import synonyms
-from rulebase import rulebase
+# from rulebase import rulebase
 from utils import bot_confirmation_prompt, bot_print_with_name, bot_print
- 
- 
- 
-for n in rulebase:
-    rule_format_list = list(rulebase[n]["rule_format"])
-    rule_tokens_list = list(rulebase[n]["rule_tokens"])
+
+
+# for n in rulebase:
+#     rule_format_list = list(rulebase[n]["rule_format"])
+#     rule_tokens_list = list(rulebase[n]["rule_tokens"])
+
+
+def karan():
+    print("nsjkfghclsncfcnsj I :* u")
  
  
 def next_rule(query_dict):
@@ -65,6 +68,7 @@ def quantifier_course(query_dict):
 
  
 def quantifier_faculty_college(query_dict):
+    college = query_dict['college']
     message_for_query_to_be_searched = "number of faculties in " + college
     if bot_confirmation_prompt(message_for_query_to_be_searched):
         query_results = get_number_of_faculties_in_college(college)
@@ -165,10 +169,10 @@ def quantifier_department_college(query_dict):
 
 def quantifier_department_faculty_college(query_dict):
     faculty = query_dict['faculty']
-    department = query_dict['department']
+    college = query_dict['college']
     message_for_query_to_be_searched = " number of colleges offering course under the " + department + ", " + faculty
     if bot_confirmation_prompt(message_for_query_to_be_searched):
-        query_results = get_number_of_department_under_faculty_at_college(faculty, department)
+        query_results = get_number_of_department_under_faculty_at_college(faculty, college)
         generated_response = "There are " + str(query_results) + " departments at " + college + ", " + faculty
         bot_print_with_name (generated_response)
         return True
@@ -296,7 +300,7 @@ def show_list_course_department(query_dict):
     department = query_dict('department')
     message_for_query_to_be_searched = " list of courses offered by the " + department
     if bot_confirmation_prompt(message_for_query_to_be_searched):
-        query_results = get_list_of_courses_in_department(faculty)
+        query_results = get_list_of_courses_in_department(department)
         generated_response = "This is the list of courses offered by the " + department + ":-\n" + str(query_results) 
         bot_print_with_name (generated_response)
         return True
@@ -379,14 +383,12 @@ def show_details_cutoff_category_course_college(query_dict):
     else:
         return False
 
-
-
 def show_details_cutoff_course_college(query_dict):
     college = query_dict('college')
     course = query_dict('course')
     message_for_query_to_be_searched = " general cutoff in "+ course + " at " + college 
     if bot_confirmation_prompt(message_for_query_to_be_searched):
-        query_results = get_cutoff_for_course_college( course, college)
+        query_results = get_cutoff_for_course_for_college( course, college)
         generated_response = " General Cutoff for in " + course + " at " + college +  " is " + str(query_results) 
         bot_print_with_name (generated_response)
         return True
@@ -444,3 +446,139 @@ def show_details_syllabus_course(query_dict):
         return False
 
 get_number_of_colleges_in_university = lambda a :  91
+
+get_number_of_faculties_in_university = lambda a : 16
+
+get_number_of_departments_in_university = lambda a : 80 
+
+def get_number_of_courses_in_university(query_dict):
+    pass 
+
+
+def get_number_of_faculties_in_college(college):
+    pass 
+
+
+def get_total_number_of_seats_for_course_at_college(course,college):
+    pass 
+
+
+def get_number_of_seats_for_category_for_course_at_college(category,course,college):
+    pass 
+
+
+def get_number_of_courses_at_college(college):
+    pass 
+
+
+def get_number_of_courses_in_faculty(faculty):
+    pass 
+
+
+def get_number_of_courses_in_department(department):
+    pass 
+
+
+def get_number_of_courses_in_department_at_college(department,college):
+    pass 
+
+
+def get_number_of_department_at_college(college):
+    pass 
+
+
+def get_number_of_department_under_faculty_at_college(faculty, department):
+    pass 
+
+
+def get_number_of_department_under_faculty(faculty):
+    pass 
+
+
+def get_number_of_colleges_offering_course(course):
+    pass 
+
+
+def get_list_of_faculties_in_college(college):
+    pass 
+
+
+def get_list_of_colleges_in_university():
+    pass 
+
+
+def get_list_of_faculties_in_university():
+    pass 
+
+
+def get_list_of_departments_in_university():
+    pass 
+
+
+def get_list_of_courses_in_university():
+    pass 
+
+
+def get_list_of_courses_at_college():
+    pass 
+
+
+def get_list_of_courses_at_college():
+    pass 
+
+
+def get_list_of_courses_in_faculty(faculty):
+    pass 
+
+
+def get_list_of_courses_in_department(department):
+    pass 
+
+
+def get_list_of_courses_in_department_at_college(department,college):
+    pass 
+
+
+def get_list_of_department_at_college(college):
+    pass 
+
+
+def get_list_of_department_under_faculty_at_college(faculty, college):
+    pass 
+
+
+def get_list_of_department_under_faculty(faculty):
+    pass 
+
+
+def get_list_of_colleges_offering_course(course):
+    pass 
+
+
+def get_cutoff_for_category_for_course_college(category, course, college):
+    pass 
+
+
+def get_cutoff_for_course_for_college( course, college):
+    pass 
+
+
+def get_coursefee_for_category_for_course_college(course, college):
+    pass 
+
+
+def get_coursefee_for_category_for_course_college(course):
+    pass 
+
+
+def get_details_for_eligibility_of_course(course):
+    pass 
+
+
+def get_details_for_duration_of_course(course):
+    pass 
+
+
+def get_details_for_syllabus_of_course(course):
+    pass 
+
