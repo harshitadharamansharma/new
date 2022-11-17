@@ -66,7 +66,17 @@ synonyms = {
     "Department of Urdu": [], 
     "Department of Buddhist Studies": [],
 
-    "college": [ "clg", "college", "colleg", "collg", "college"]
-
+    "degree": ["degree", "degre", "dgree"], 
+    "faculty": ["faculty", "faclty", "faculty"], 
+    "department": ["department", "dept", "deprtmnt", "departments", "department"], 
+    "college": ["clg", "college", "colleg", "collg", "college"],
+    "course" : [], 
+    "seats": [], 
+    "category": [], 
+    "eligibility": [], 
+    "duration": [], 
+    "syllabus": [], 
+    "cutoff": [], 
+    "coursefee" : [],
    
 }

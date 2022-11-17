@@ -1,9 +1,9 @@
-# Run in powershell window whenever you are not able to activate the virtual environment created by Python3 ON WINDOWS 10
-Set-ExecutionPolicy Unrestricted -Scope Process
+# # Run in powershell window whenever you are not able to activate the virtual environment created by Python3 ON WINDOWS 10
+# Set-ExecutionPolicy Unrestricted -Scope Process
 
-Installed external packages
-nltk:- 
-# in utils:- 
-# # from nltk.stem import WordNetLemmatizer 
+# Installed external packages
+# nltk:- 
+# # in utils:- 
+# # # from nltk.stem import WordNetLemmatizer 
 
 

@@ -103,77 +103,77 @@ rulebase = {
         "rule_format": "show_list_course",
         "rule_tokens": ['show', 'course'],
         "rule_handler": get_list_of_courses_in_university
-    },
-    21:  {  
-        "rule_format": show_list_course_college,
-        "rule_tokens": ['show','college', 'course'],
-        "rule_handler": get_list_of_courses_at_college
-    },
-    22:  {  
-        "rule_format": show_list_course_faculty,
-        "rule_tokens": ['show', 'faculty', 'course'],
-        "rule_handler": get_list_of_courses_in_faculty
-    },
-    23:  {  
-        "rule_format": show_list_course_department,
-        "rule_tokens": ['show', 'department', 'course'],
-        "rule_handler": get_list_of_courses_in_department
-    },
-    24:  {  
-        "rule_format": show_list_course_department_college,
-        "rule_tokens": ['show', 'department', 'college', 'course'],
-        "rule_handler": get_list_of_courses_in_department_at_college
-    },
-    25:  {  
-        "rule_format": show_list_department_college,
-        "rule_tokens": ['show', 'department', 'college'],
-        "rule_handler": get_list_of_department_at_college
-    },
-    26:  {  
-        "rule_format": show_list_department_faculty_college,
-        "rule_tokens": ['show', 'faculty', 'department', 'college'],
-        "rule_handler": get_list_of_department_under_faculty_at_college
-    },
-    27:  {  
-        "rule_format": show_list_department_faculty,
-        "rule_tokens": ['show', 'faculty', 'department'],
-        "rule_handler": get_list_of_department_under_faculty
-    },
-    28:  {  
-        "rule_format": show_list_college_course,
-        "rule_tokens": ['show',  'college', 'course'],
-        "rule_handler": get_list_of_colleges_offering_course
-    },
-    29:  {  
-        "rule_format": show_details_cutoff_category_course_college,
-        "rule_tokens": ['show','college', 'course', 'category' , 'cutoff'],
-        "rule_handler": get_cutoff_for_category_for_course_college
-    },
-    30:  {  
-        "rule_format": show_details_cutoff_course_college,
-        "rule_tokens": ['show','college', 'course', 'cutoff'],
-        "rule_handler": get_cutoff_for_course_for_college
-    },
-    31:  {  
-        "rule_format": show_details_coursefee_category_course_college,
-        "rule_tokens": ['show',  'college', 'course', 'category', 'coursefee'],
-        "rule_handler": get_coursefee_for_category_for_course_college
-    },
-    32:  {  
-        "rule_format": show_details_eligibility_course,
-        "rule_tokens": ['show', 'course', 'eligibility'],
-        "rule_handler": get_details_for_eligibility_of_course
-    },
-    33:  {  
-        "rule_format": show_details_duration_course,
-        "rule_tokens": ['show', 'course', 'duration'],
-        "rule_handler": get_details_for_duration_of_course
-    },
-    34:  {  
-        "rule_format": show_details_syllabus_course,
-        "rule_tokens": ['show', 'course', 'syllabus'],
-        "rule_handler": get_details_for_syllabus_of_course
-    },
+    }
+    # 21:  {  
+    #     "rule_format": show_list_course_college,
+    #     "rule_tokens": ['show','college', 'course'],
+    #     "rule_handler": get_list_of_courses_at_college
+    # },
+    # 22:  {  
+    #     "rule_format": show_list_course_faculty,
+    #     "rule_tokens": ['show', 'faculty', 'course'],
+    #     "rule_handler": get_list_of_courses_in_faculty
+    # },
+    # 23:  {  
+    #     "rule_format": show_list_course_department,
+    #     "rule_tokens": ['show', 'department', 'course'],
+    #     "rule_handler": get_list_of_courses_in_department
+    # },
+    # 24:  {  
+    #     "rule_format": show_list_course_department_college,
+    #     "rule_tokens": ['show', 'department', 'college', 'course'],
+    #     "rule_handler": get_list_of_courses_in_department_at_college
+    # },
+    # 25:  {  
+    #     "rule_format": show_list_department_college,
+    #     "rule_tokens": ['show', 'department', 'college'],
+    #     "rule_handler": get_list_of_department_at_college
+    # },
+    # 26:  {  
+    #     "rule_format": show_list_department_faculty_college,
+    #     "rule_tokens": ['show', 'faculty', 'department', 'college'],
+    #     "rule_handler": get_list_of_department_under_faculty_at_college
+    # },
+    # 27:  {  
+    #     "rule_format": show_list_department_faculty,
+    #     "rule_tokens": ['show', 'faculty', 'department'],
+    #     "rule_handler": get_list_of_department_under_faculty
+    # },
+    # 28:  {  
+    #     "rule_format": show_list_college_course,
+    #     "rule_tokens": ['show',  'college', 'course'],
+    #     "rule_handler": get_list_of_colleges_offering_course
+    # },
+    # 29:  {  
+    #     "rule_format": show_details_cutoff_category_course_college,
+    #     "rule_tokens": ['show','college', 'course', 'category' , 'cutoff'],
+    #     "rule_handler": get_cutoff_for_category_for_course_college
+    # },
+    # 30:  {  
+    #     "rule_format": show_details_cutoff_course_college,
+    #     "rule_tokens": ['show','college', 'course', 'cutoff'],
+    #     "rule_handler": get_cutoff_for_course_for_college
+    # },
+    # 31:  {  
+    #     "rule_format": show_details_coursefee_category_course_college,
+    #     "rule_tokens": ['show',  'college', 'course', 'category', 'coursefee'],
+    #     "rule_handler": get_coursefee_for_category_for_course_college
+    # },
+    # 32:  {  
+    #     "rule_format": show_details_eligibility_course,
+    #     "rule_tokens": ['show', 'course', 'eligibility'],
+    #     "rule_handler": get_details_for_eligibility_of_course
+    # },
+    # 33:  {  
+    #     "rule_format": show_details_duration_course,
+    #     "rule_tokens": ['show', 'course', 'duration'],
+    #     "rule_handler": get_details_for_duration_of_course
+    # },
+    # 34:  {  
+    #     "rule_format": show_details_syllabus_course,
+    #     "rule_tokens": ['show', 'course', 'syllabus'],
+    #     "rule_handler": get_details_for_syllabus_of_course
+    # },
 
 
 

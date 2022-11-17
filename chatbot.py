@@ -6,6 +6,7 @@ from preprocessing import query_preprocessor
 from utils import bot_print, bot_print_with_name
 from utils import bot_input_with_name, user_input_with_name
 from utils import get_keyword_classes_from_query, get_keyword_dictionary_from_query
+from utils import get_best_match_rule, invalid_query_prompt
 # from rule_handlers import *
 
 def show_greeting():
@@ -34,27 +35,39 @@ def get_user_name():
 def get_user_query(username):
 
     query = user_input_with_name(username)
-    query = query_preprocessor(query)
 
     return query
 
 
-def chat():
+def chat_init():
 
     user_name = get_user_name()
     show_greeting()
 
     continue_chat_flag = True
 
-    while continue_chat_flag == True:
-
+    while continue_chat_flag == True :
+        
         query = get_user_query(user_name)
         # keyword_classes = get_keyword_classes_from_query(query)
         # print(keyword_classes)
+        preprocessed_query = query_preprocessor(query)
+        
 
-        keyword_dictionary = get_keyword_dictionary_from_query(query)
-        print(keyword_dictionary)
+        if "quit" in preprocessed_query:
+            sys.exit(0)
+
+        keyword_classes_dictionary = get_keyword_dictionary_from_query(preprocessed_query)
+        print(keyword_classes_dictionary)
         # call_rulehandler(keyword_dictionary)
+        best_match_rule = get_best_match_rule(set(keyword_classes_dictionary.keys()))
+        #this willreturn rule_handler function
+
+        if best_match_rule == -1: 
+            invalid_query_prompt()  #if query is not processed 
+        else:
+            response = best_match_rule(keyword_classes_dictionary)
+            bot_print_with_name(response)
 
         # next_rule(keyword_dictionary)
         
@@ -65,5 +78,10 @@ def chat():
 if __name__ == "__main__":
 
     config["TAB_WIDTH"] = " " * (len(config["BOT_NAME"]) + 2)
-    # karan()
-    chat()
+    chat_init()
+
+    
+    
+
+    
+    

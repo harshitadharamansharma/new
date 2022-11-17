@@ -2,7 +2,10 @@ from config import config
 from nltk.stem import WordNetLemmatizer
 from synonyms import synonyms
 from keyword_classes import keyword_classes
+
+from rulebase import rulebase
 import re
+import random
 
 
 def bot_print(message):
@@ -101,14 +104,19 @@ def get_keyword_dictionary_from_query(query):
 
 
 
-def bot_confirmation_prompt(query_to_be_searched):
-    bot_print_with_name("Are you asking for "+ query_to_be_searched +"?")
-    bot_print("1.Yes! this what I was looking for.")
-    bot_print("2.No! I asked something else.")
- 
-    confirmation = input("Enter the you choice 1 OR 2")
-    if confirmation == 1:
-        return True
-    else :
-        #call next rule from the handler
-        pass
+def get_best_match_rule(query_set):
+    """this method will take keyword classes set as input and if the tokens(keywords in the set is euql to the elements in the set generated after spluting the rule_format string then the best mathed rule will be returned"""
+    for rule in rulebase:
+        rule_format_set = set(str(rulebase[rule]["rule_format"]).split("_"))   # :b d:
+        if rule_format_set == query_set :
+            return rulebase[rule]["rule_handler"]
+    return -1  # if no match found 
+        
+
+def invalid_query_prompt():
+    invalid_query_responses = [ "I didn't get this! can you please come again?",
+    "Not able to process this, could you repeat that",  "Didn't get what you want?", "Your query is either invalid or can't be processed", 
+    "OK! let me process your query! Could you repeat that? ", " Wrong input!"]
+    bot_print_with_name(random.choice(invalid_query_responses))
+
+    

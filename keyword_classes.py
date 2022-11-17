@@ -5,28 +5,30 @@ keyword_classes = {
 
     # filled _ slots = keyword classes with values provided by the users e.g college = ARSD
     #  keywords with respect to values are required   = no. of colleges ?
-
+   # "asked_entity":{"degree", "faculty", "department", "college", "course", "seats", "category", "eligibility", "duration", "syllabus", "cutoff", "coursefee" },
+    
     "quantifier": {"Number"},    
     "show": {"list", "Details"},
     # "details" : {"eligibility", "duration", "syllabus", "cutoff", "coursefee"},
 
-    "degree": {"BA", "BSc"},
+    "degree": {"degree", "BA", "BSc"},
     # "degreetype": {"Honours", "programme"}, #vocational; diploma
     # all the faculties at DU and all the dept. at facuty of arts are added
-    "faculty": {"Arts", "Applied Social Sciences and Humanities", "Commerce and Business Studies", "Education", "Interdisciplinary and Life Sciences", "Law", "Management Studies", "Mathematical Sciences", "Medical Sciences", "Music", "Open Learning", "Science", "Social Sciences", "Technology", "Affiliated Faculties" },
-    "department": {"Department of Arabic","Department of English", "Department of Germanic & Romance Studies", "Department of Hindi", "Department of Library & Information Science", "Department of Linguistics", "Department of Modern Indian Languages and Literary Studies", "Department of Persian", "Department of Philosophy", "Department of Psychology", "Department of Slavonic & Finno-Ugrian Studies", "Department of Sanskrit", "Department of Punjabi", "Department of Urdu", "Department of Buddhist Studies" }, # to be discussed
-    "college": {"Acharya Narendra Dev College","Aditi Mahavidyalaya(W)", "Aryabhatta College", "Atma Ram Sanatan Dharma College", "Bhagini Nivedita College", "Bharati College"},
-    "course": {"Economics", "History", "English", "Sanskrit", "Hindi", "Punjabi", "Bengali", "Urdu", "Arabic", "Persian", "French", "German", "Hindi", "Italian", "Spanish" },  # to be discussed ( deprtment / faculty / course name )
+    "faculty": {"faculty", "Arts", "Applied Social Sciences and Humanities", "Commerce and Business Studies", "Education", "Interdisciplinary and Life Sciences", "Law", "Management Studies", "Mathematical Sciences", "Medical Sciences", "Music", "Open Learning", "Science", "Social Sciences", "Technology", "Affiliated Faculties" },
+    "department": {"department", "Department of Arabic","Department of English", "Department of Germanic & Romance Studies", "Department of Hindi", "Department of Library & Information Science", "Department of Linguistics", "Department of Modern Indian Languages and Literary Studies", "Department of Persian", "Department of Philosophy", "Department of Psychology", "Department of Slavonic & Finno-Ugrian Studies", "Department of Sanskrit", "Department of Punjabi", "Department of Urdu", "Department of Buddhist Studies" }, # to be discussed
+    "college": {"college", "Acharya Narendra Dev College","Aditi Mahavidyalaya(W)", "Aryabhatta College", "Atma Ram Sanatan Dharma College", "Bhagini Nivedita College", "Bharati College"},
+    "course": {"course" , "Economics", "History", "English", "Sanskrit", "Hindi", "Punjabi", "Bengali", "Urdu", "Arabic", "Persian", "French", "German", "Hindi", "Italian", "Spanish" },  # to be discussed ( deprtment / faculty / course name )
     # , ("Applied Psychoogy","Psychology"), "Philosophy", ("Hindi Patrakarita"),
     "seats": {"seats", "seat"},#{"total", "category wise"},
     "category": {"General", "SC", "ST", "OBC", "Minority", "EWS"},
 
 
+    
     # "details" : {"eligibility", "duration", "syllabus", "cutoff", "coursefee"},
-    "eligibility":{} ,
-    "duration": {} , 
-    "syllabus": {}, 
-    "cutoff": {}, 
-    "coursefee": {}
+    # "eligibility":{} ,
+    # "duration": {} , 
+    # "syllabus": {}, 
+    # "cutoff": {}, 
+    # "coursefee": {}
  
 }
