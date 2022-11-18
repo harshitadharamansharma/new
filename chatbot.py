@@ -53,26 +53,27 @@ def chat_init():
         # print(keyword_classes)
         preprocessed_query = query_preprocessor(query)
         
-
         if "quit" in preprocessed_query:
             sys.exit(0)
 
         keyword_classes_dictionary = get_keyword_dictionary_from_query(preprocessed_query)
         print(keyword_classes_dictionary)
         # call_rulehandler(keyword_dictionary)
-        best_match_rule = get_best_match_rule(set(keyword_classes_dictionary.keys()))
+        query_token_set = set(keyword_classes_dictionary.keys())
+        if 'entity' in keyword_classes_dictionary.keys():    
+            query_token_set.add(keyword_classes_dictionary['entity'])
+            query_token_set.remove('entity')
+        best_match_rule = get_best_match_rule(query_token_set())
         #this willreturn rule_handler function
 
-        if best_match_rule == -1: 
-            invalid_query_prompt()  #if query is not processed 
+        if best_match_rule == str(-1): 
+            invalid_query_prompt() 
         else:
             response = best_match_rule(keyword_classes_dictionary)
             bot_print_with_name(response)
 
-        # next_rule(keyword_dictionary)
-        
-
     return 0
+
 
 
 if __name__ == "__main__":

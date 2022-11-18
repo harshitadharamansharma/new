@@ -5,7 +5,7 @@ synonyms = {
     "Economics": ["economics", "economic", "economy"],
     "History": ["history"],
     "Number": ["number" , "how many", "how much", "what are the number", "what are the no.", "get me the number"],
-    "List": ["list", "names", "name", "what", " what are"], #why plural we are using the lem and for spell
+    "List": ["list", "names", "name", "what", " what are", "name the", "list the"], #why plural we are using the lem and for spell
     "Details": [""],
     # "Seat Matrix": ["seat", "seat matrix", "seat allocation", "allocation", "seats", "seats", "seats"],
     "General": ["genr", "gen", "general", "ur", "unreserved"],
@@ -31,7 +31,7 @@ synonyms = {
     "Aditi Mahavidyalaya(W)": ["aditi mahavidyalaya", "aditi college", "aditi"],
     "Aryabhatta College": ["aryabhatta", "aryabhat", "aryabat"],    
     "Atma Ram Sanatan Dharma College": ["atma ram sanatan dharma college", "arsd"],
-    "Bhagini Nivedita College": ["bhagini nivedita college", "bhagini navedita college"],
+    "Bhagini Nivedita College": ["bhagini nivedita college", "bhagini navedita college", "BNC"],
     "Bharati College": ["bharati college", "bharti", "bhrti", "bhaarti", "bhaarati college"],
     
     "Arts":["arts", "art"],
@@ -70,13 +70,14 @@ synonyms = {
     "faculty": ["faculty", "faclty", "faculty"], 
     "department": ["department", "dept", "deprtmnt", "departments", "department"], 
     "college": ["clg", "college", "colleg", "collg", "college"],
-    "course" : [], 
-    "seats": [], 
-    "category": [], 
+    "course" : ["course", "crse", "courses", "corse"], 
+    "seats": ["seats", "seat", "sts"], 
+    "category": ["categry", "catgory", "categories", "category"], 
     "eligibility": [], 
     "duration": [], 
     "syllabus": [], 
     "cutoff": [], 
     "coursefee" : [],
+    
    
 }

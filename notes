@@ -7,3 +7,36 @@
 # # # from nltk.stem import WordNetLemmatizer 
 
 
+# ______________________________
+# 17/18/11/22
+
+#cut paste these notes in notes
+
+# discuss
+# degree course 
+# dept in a college
+# colleges under dept
+# colleges under a dept(dept at university level)
+# faulty in college
+# prompts (confirmation, invalid, response)
+# modularity
+# same files are getting opened again and again; same code more than once
+# respnse formatter for listing queries 
+#DU SYSTEM SOME ug COURSES ARE NOT OFFERED UNDER FACULLTY
+#get_number_of_courses_in_department_at_college(query_dict):
+    # to be discussed college level detail 
+#details are varying in both college wesite and du 
+# daulat ram college, aryabhatta ba program
+
+#as of now, no modularity; and response formatting is also happening in the same get function 
+
+#no courses is listed directly under dept 
+# depts. are listed under faculties; courses are listed under faculties 
+
+#to do 
+#add all these 10 colleges names in keyword classes
+#add and create files with paths and other files according to name
+# COMPLETE CSV :-  faculty_dept_course
+# remove tokens from rulebase
+# create one doc for eigibility (prerequisites) synonym  ,syllabus and duration 
+
