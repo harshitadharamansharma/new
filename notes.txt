@@ -40,3 +40,25 @@
 # remove tokens from rulebase
 # create one doc for eigibility (prerequisites) synonym  ,syllabus and duration 
 
+
+
+this method will take keyword classes set as input and if the tokens(keywords in the set is euql to the elements in the set generated after spluting the rule_format string then the best mathed rule will be returned
+
+
+    bot_print_with_name(" Hi! What are you looking for?")
+    bot_print("You can ask queries like the following -")
+    bot_print("1. Get me the list of colleges that have B.Sc. Honours Mathematics")
+    bot_print("2. Show me the number of seats of SC category for BA Programme in Aryabhatta College")
+    bot_print("3. List the colleges offering B.Ed.")
+    bot_print("For more information on what you can ask the chatbot, visit x.y.com")
+    bot_print("At any point, if you wish to abort the chat, type QUIT")
+
+    bot_print_with_name("Hello! I am config[BOTNAME].title(). You can ask me your UG admissions related queries.")    
+    bot_print("Let me know how can I help you.")
+    bot_print(" What are you looking for?")
+    bot_print("At any point, if you wish to abort the chat, type QUIT")
+
+
+        hh = list(keyword_classes_dictionary.keys())
+        hh.remove('entity')
+        query_token_set = set(hh)

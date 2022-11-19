@@ -11,13 +11,12 @@ from utils import get_best_match_rule, invalid_query_prompt
 
 def show_greeting():
 
+    # bot_print_with_name(f"Hello! I am {config["BOT_NAME"].title()}. You can ask me your UG admissions related queries.")    
     bot_print_with_name(" Hi! What are you looking for?")
-    bot_print("You can ask queries like the following -")
-    bot_print("1. Get me the list of colleges that have B.Sc. Honours Mathematics")
-    bot_print("2. Show me the number of seats of SC category for BA Programme in Aryabhatta College")
-    bot_print("3. List the colleges offering B.Ed.")
-    bot_print("For more information on what you can ask the chatbot, visit x.y.com")
+    bot_print("Let me know how can I help you.")
+    bot_print(" What are you looking for?")
     bot_print("At any point, if you wish to abort the chat, type QUIT")
+
 
 
 def get_user_name():
@@ -59,12 +58,16 @@ def chat_init():
         keyword_classes_dictionary = get_keyword_dictionary_from_query(preprocessed_query)
         print(keyword_classes_dictionary)
         # call_rulehandler(keyword_dictionary)
+
         query_token_set = set(keyword_classes_dictionary.keys())
+
         if 'entity' in keyword_classes_dictionary.keys():    
             query_token_set.add(keyword_classes_dictionary['entity'])
             query_token_set.remove('entity')
-        best_match_rule = get_best_match_rule(query_token_set())
-        #this willreturn rule_handler function
+        # print(query_token_set)
+
+        best_match_rule = get_best_match_rule(query_token_set)
+        #this will return rule_handler function
 
         if best_match_rule == str(-1): 
             invalid_query_prompt() 

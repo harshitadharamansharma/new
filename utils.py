@@ -105,11 +105,14 @@ def get_keyword_dictionary_from_query(query):
 
 
 def get_best_match_rule(query_set):
-    '''this method will take keyword classes set as input and if the tokens(keywords in the set is euql to the elements in the set generated after spluting the rule_format string then the best mathed rule will be returned'''
+    ''' parameter :-  set of keywords present in the query
+        return:- function from rulebase'''
     for rule in rulebase:
         rule_format_set = set(str(rulebase[rule]["rule_format"]).split("_"))   # :b d:
         if rule_format_set == query_set :
+            # print("yes")
             return rulebase[rule]["rule_handler"]
+            
     return str(-1)  # if no match found 
         
 
