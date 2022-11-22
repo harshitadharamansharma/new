@@ -42,9 +42,9 @@ Atma Ram Sanatan Dharma College,B.Sc. (H) Chemistry,86,35,13,6,23,9,NA,Y
 Atma Ram Sanatan Dharma College,B.Sc. (H) Mathematics,96,38,14,7,26,11,NA,Y
 Atma Ram Sanatan Dharma College,B.Sc. (H) Electronics,39,16,6,3,11,3,NA,Y
 Atma Ram Sanatan Dharma College,B.Sc. (H) Computer Science,58,24,9,4,16,5,NA,Y
-Atma Ram Sanatan Dharma College,B.Sc. (Prog.) Physical Science Chemistry,77,31,12,6,21,7,NA,Y
-Atma Ram Sanatan Dharma College,B.Sc. (Prog.) Physical Science Electronics,77,31,12,6,21,7,NA,Y
-Atma Ram Sanatan Dharma College,B.Sc. (Prog.) Physical Science Computer Science,75,31,11,5,20,7,NA,Y
+Atma Ram Sanatan Dharma College,B.Sc. (Prog.) Physical Science with Chemistry,77,31,12,6,21,7,NA,Y
+Atma Ram Sanatan Dharma College,B.Sc. (Prog.) Physical Science with Electronics,77,31,12,6,21,7,NA,Y
+Atma Ram Sanatan Dharma College,B.Sc. (Prog.) Physical Science with Computer Science,75,31,11,5,20,7,NA,Y
 Atma Ram Sanatan Dharma College,"B.Sc. (Prog.) Applied Physical Science Industrial
 Chemistry",57,24,9,4,15,5,NA,Y
 Bhagini Nivedita College,B.A. (Prog.),510,207,77,38,137,51,NA,N
@@ -62,7 +62,7 @@ Bharati College,B.A. (H) Sanskrit,78,31,12,6,21,8,NA,N
 Bharati College,B.A. (H) History,78,31,12,6,21,8,NA,N
 Bharati College,B.A. (H) Pol. Science,78,31,12,6,21,8,NA,N
 Bharati College,B.A. (H) Journalism,57,23,9,4,15,6,NA,N
-Bharati College,b.sc. (H) Psychology,57,23,9,4,15,6,NA,N
+Bharati College,B.Sc. (H) Psychology,57,23,9,4,15,6,NA,N
 Bharati College,B. A (H) Sociology,57,23,9,4,15,6,NA,N
 Bharati College,b.sc. (H) Maths,57,23,9,4,15,6,NA,N
 Bharati College,B. Com. (H) ,151,61,23,11,41,15,NA,N
@@ -101,7 +101,7 @@ Daulat Ram College,B.A. (H) Pol. Science,115,47,17,9,31,11,NA,N
 Daulat Ram College,B.A. (H) Psychology,46,19,7,3,12,5,NA,N
 Daulat Ram College,B.A. (H) Sanskrit,46,19,7,3,12,5,NA,N
 Daulat Ram College,B.A. (Prog.),211,87,32,16,57,19,NA,N
-Daulat Ram College,B.Com. (P) ,96,39,14,7,26,10,NA,N
+Daulat Ram College,B.Com. (H) ,96,39,14,7,26,10,NA,N
 Daulat Ram College,B.Com. (H) ,139,56,21,10,38,14,NA,N
 Daulat Ram College,B.Sc. (H) Biochemistry,29,12,4,2,8,3,NA,N
 Daulat Ram College,B.Sc. (H) Botany,58,23,9,4,16,6,NA,N
@@ -124,3 +124,4 @@ Deen Dayal Upadhyaya College,B.SC. PHYSICAL SCIENCE WITH CHEMISTRY,40,16,6,3,11,
 Deen Dayal Upadhyaya College,B.SC. PHYSICAL SCIENCE WITH COMPUTER SCIENCE,40,16,6,3,11,4,NA,Y
 Deen Dayal Upadhyaya College,B.SC. MATHEMATICAL SCIENCE,40,16,6,3,11,4,NA,Y
 Deen Dayal Upadhyaya College,B.A. (Prog.),120,48,18,9,33,12,NA,Y
+

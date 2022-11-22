@@ -1,0 +1,77 @@
+output = ["B.Sc. (Prog.) Physical Science Electronics" , 
+   "B.A. (Vs) Management And Marketing Of Insurance" , 
+   "B.A. (H)Economics" , 
+   "B.A. (H) Social Work" , 
+   "B.A. (H) Psychology" , 
+   "B.Sc. Physical Science With Electronics" , 
+   "B.Sc. Life Sciences" , 
+   "B.A. (Vs) Marketing Management And Retail Business" , 
+   "B.Sc. (H) Mathematics" , 
+   "B.A. (H) Philosophy" , 
+   "B.Sc. (Prog.) Physical Science Computer Science" , 
+   "B.Sc. (Prog.) Applied Physical Science Industrial Chemistry" , 
+   "B.Sc. (H) Microbiology" , 
+   "B.Sc. Physical Science With Computer Science" , 
+   "B.A. (H) Geography" , 
+   "B.Sc. Physical Science With Computer" , 
+   "B.A. (Vs)Material Management" , 
+   "B.Sc. (H) Polymer Science" , 
+   "B.A. (H) Hindi Journalism" , 
+   "B.Sc. (H) Psychology" , "B.A. (Vs)Tourism management" , 
+   "B.A. (H) History" , 
+   "B.Sc. (H) Instrumentation" , 
+   "B.A. (Vs) Small And Medium Enterprises" , 
+   "B.Sc. Physical Science With Chemistry" , 
+   "B.A. (H) Sanskrit" , 
+   "B.A. (H) Music" , 
+   "B.Sc. (H) Food Technology" , 
+   "B.A. (H) English" , 
+   "B.Com (Prog.)" , 
+   "B.Sc. (H) Home Science" ,
+   "B.Com." , 
+   "B.Sc. Physical Science With Computer Science" , 
+   "B.A. (Vs) Human Resource Management" , 
+   "B.Sc. (H) Maths" , 
+   "B.A. Prog." , 
+   "B.A. (H) Economics" , 
+   "B.Sc. (H) Chemistry" , 
+   "B.Com (H)" , 
+   "B.A. (H) Political Science" , 
+   "B. Com. (H)" , 
+   "B.Sc. (H) Biochemistry" , 
+   "B.Sc. Mathematical Science" , 
+   "B.Sc.(H) Mathematics" , 
+   "B.Sc. (H) Computer Science" , 
+   "B. Com.(H)" , 
+   "B.A. (H) Pol. Science" , 
+   "B. A (H) Sociology" , 
+   "B.Sc. Life Science" , 
+   "B.Sc. (H) Botany" , 
+   "B.A. (Prog.) (History + Political Science)" , 
+   "B.Sc. (H) Physics" , 
+   "B.A. (Vs) Office Management And Secretarial Practice" , 
+   "B.Sc.(H) Computer Science" , 
+   "B.A. (H) Hindi" , 
+   "B.Sc. (Prog.) Physical Science Chemistry" , 
+   "B.A. (H) Journalism" , 
+   "B.Sc. (H) Electronics" , 
+   "B.A. (Prog.)" , 
+   "B.Sc. (H) Zoology" , 
+   "B.Sc. (H) Computer  Science" , 
+   "B.Com. (H)" , 
+   "B.Sc. (H) Biomedical Science" , 
+   "B.Com. (H)" , 
+   "B. Com." ]
+
+new_lower_list = [] 
+for a in output:
+    new_lower_list.append(a.lower())
+
+print(new_lower_list)
+
+
+
+# [, , , , , , , , , , , , ,, ,  , ,  , , , , , , , , , , , "b.sc. (h) home science", "b.com.", "b.sc. physical science with computer science", "b.a. (vs) human resource management", "b.sc. (h) maths", "b.a. prog.", "b.a. (h) economics", "b.sc. (h) chemistry", "b.com (h)", "b.a. (h) political science", "b. com. (h)", "b.sc. (h) biochemistry", "b.sc. mathematical science", "b.sc.(h) mathematics", "b.sc. (h) computer science", "b. com.(h)", "b.a. (h) pol. science", "b. a (h) sociology", "b.sc. life science", "b.sc. (h) botany", "b.a. (prog.) (history + political science)", "b.sc. (h) physics", "b.a. (vs) office management and secretarial practice", "b.sc.(h) computer science", "b.a. (h) hindi", "b.sc. (prog.) physical science chemistry", "b.a. (h) journalism", "b.sc. (h) electronics", "b.a. (prog.)", "b.sc. (h) zoology", "b.sc. (h) computer  science", "b.com. (h)", "b.sc. (h) biomedical science", "b.com. (h)", "b. com."]
+
+
+# ["b.sc. (prog.) physical science electronics", "b.a. (vs) management and marketing of insurance", "b.a. (h)economics", "b.a. (h) social work", "b.a. (h) psychology", "b.sc. physical science with electronics", "b.sc. life sciences", "b.a. (vs) marketing management and retail business", "b.sc. (h) mathematics", "b.a. (h) philosophy", "b.sc. (prog.) physical science computer science", "b.sc. (prog.) applied physical science industrial chemistry", "b.sc. (h) microbiology", "b.sc. physical science with computer science", "b.a. (h) geography", "b.sc. physical science with computer", "b.a. (vs)material management", "b.sc. (h) polymer science", "b.a. (h) hindi journalism", "b.sc. (h) psychology", "b.a. (vs)tourism management", "b.a. (h) history", "b.sc. (h) instrumentation", "b.a. (vs) small and medium enterprises", "b.sc. physical science with chemistry", "b.a. (h) sanskrit", "b.a. (h) music", "b.sc. (h) food technology", "b.a. (h) english", "b.com (prog.)", "b.sc. (h) home science", "b.com.", "b.sc. physical science with computer science", "b.a. (vs) human resource management", "b.sc. (h) maths", "b.a. prog.", "b.a. (h) economics", "b.sc. (h) chemistry", "b.com (h)", "b.a. (h) political science", "b. com. (h)", "b.sc. (h) biochemistry", "b.sc. mathematical science", "b.sc.(h) mathematics", "b.sc. (h) computer science", "b. com.(h)", "b.a. (h) pol. science", "b. a (h) sociology", "b.sc. life science", "b.sc. (h) botany", "b.a. (prog.) (history + political science)", "b.sc. (h) physics", "b.a. (vs) office management and secretarial practice", "b.sc.(h) computer science", "b.a. (h) hindi", "b.sc. (prog.) physical science chemistry", "b.a. (h) journalism", "b.sc. (h) electronics", "b.a. (prog.)", "b.sc. (h) zoology", "b.sc. (h) computer  science", "b.com. (h)", "b.sc. (h) biomedical science", "b.com. (h)", "b. com."]

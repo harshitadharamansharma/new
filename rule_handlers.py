@@ -2,16 +2,16 @@
 import random
 import csv
 
-path_1 = "C:\du_chatbot_terminal\college_course_category_seats.csv"
+path_1 = "C:\du_chatbot_terminal\data\college_course_category_seats.csv"
 file_1 = open(path_1, newline = '')
 
-path_2 = "C:\du_chatbot_terminal\\faculty_department.csv"
+path_2 = "C:\du_chatbot_terminal\data\\faculty_department.csv"
 file_2 = open(path_2, newline = '')
 
-path_3 = "C:\du_chatbot_terminal\college_course.csv"
+path_3 = "C:\du_chatbot_terminal\data\college_course.csv"
 file_3 = open(path_3, newline = '')
 
-path_4 = "C:\du_chatbot_terminal\college_course_category_coursefee.csv"
+path_4 = "C:\du_chatbot_terminal\data\college_course_category_coursefee.csv"
 file_4 = open(path_4, newline = '')
 
 # def bot_confirmation_prompt(query_to_be_searched):
