@@ -39,7 +39,9 @@ def get_number_of_colleges_in_university  (query_dict):
 
     colleges_set = set()
     for row in reader:
-        colleges_set.add(row[0].lower())
+        colleges_set.add(row[0].strip().title())  #   File "C:\du_chatbot_terminal\rule_handlers.py", line 42, in get_number_of_colleges_in_university
+                                                                #     colleges_set.add(row[0].strip().title())
+                                                                # IndexError: list index out of range
         # print(row[0])
 
     query_results = len(colleges_set)   # logic to count no. of colleges from the json or csv
@@ -123,6 +125,9 @@ def get_total_number_of_seats_for_course_at_college(query_dict):
 
     possible_responses = ["There are {total_no_of_seats} total seats in {ccourse} at {ccollege}", "There are {total_no_of_seats} seats available in {ccourse} at {ccollege}", "{total_no_of_seats} seats in total in {ccourse} at {ccollege}"]
     generated_response = (random.choice(possible_responses)).format(total_no_of_seats = query_results, ccollege = college, ccourse = course )  
+
+    # respone to tell the user that this course is not available in theis college
+    # response to tell the user that there is no resesrvation of seats for this category
 
     return generated_response
     
