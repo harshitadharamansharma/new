@@ -70,7 +70,7 @@ def get_number_of_colleges_in_university  (query_dict):
 
     colleges_set = set()
 
-    for row in reader1:
+    for row in reader4:
         colleges_set.add(row[0].strip().title())
         # print(row[0])
 
@@ -78,7 +78,14 @@ def get_number_of_colleges_in_university  (query_dict):
     response_dict["colleges_set"] = colleges_set
     response_dict["no_of_college"] = len(colleges_set)
 
+    file_4.seek(0)
+    next(reader4)
+
+
     return response_dict
+    
+
+#file reader iterator needs to go to the first line after everycall
 
 
 def get_number_of_faculties_in_university (query_dict): 
@@ -89,6 +96,9 @@ def get_number_of_faculties_in_university (query_dict):
     response_dict = dict()
     response_dict["faculties_set"] = faculties_set
     response_dict["no_of_faculties"] = len(faculties_set)
+
+    file_2.seek(0)
+    next(reader2)
 
     return response_dict
 
@@ -103,6 +113,9 @@ def get_number_of_departments_in_university(query_dict):
     response_dict["departments_set"] = departments_set
     response_dict["no_of_departments"] = len(departments_set)
    
+    file_2.seek(0)
+    reader2.next()
+
     return response_dict
 
 
@@ -116,6 +129,9 @@ def get_number_of_courses_in_university(query_dict):
     response_dict["courses_set"] = courses_set
     response_dict["no_of_courses"] = len(courses_set)
       
+    file_3.seek(0)
+    next(reader3)
+
     return response_dict
 
 # other variant of this could be making set of row[1] in college_course_cat_seat or fee and then print len
@@ -147,6 +163,9 @@ def get_total_number_of_seats_for_course_at_college(query_dict):
     response_dict["college"] = college
     response_dict["course"] = course
     response_dict["total seats"] = query_results
+
+    file_1.seek(0)
+    next(reader1)
 
     return response_dict
     
@@ -553,7 +572,6 @@ def get_coursefee_for_category_for_course_college(query_dict):
 
     return response_dict
     
-
 
 
 def get_details_for_eligibility_of_course(query_dict):

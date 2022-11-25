@@ -6,7 +6,7 @@ from preprocessing import query_preprocessor
 from utils import bot_print, bot_print_with_name
 from utils import bot_input_with_name, user_input_with_name
 from utils import get_keyword_classes_from_query, get_keyword_dictionary_from_query
-from utils import get_best_match_rule, invalid_query_prompt, call_response_formatter
+from utils import get_best_match_rule, invalid_query_prompt, get_response_formatter
 # from rule_handlers import *
 
 def show_greeting():
@@ -67,16 +67,16 @@ def chat_init():
         # print(query_token_set)
 
         best_match_rule = get_best_match_rule(query_token_set)
-
+ 
         #this will return rule_handler function
 
         if best_match_rule == str(-1): 
             invalid_query_prompt() 
         else:
             response_dict = best_match_rule(keyword_classes_dictionary)
-            response = call_response_formatter(response_dict)
-            bot_input_with_name(response)
-            
+            best_match_response_formatter = get_response_formatter(query_token_set)
+            response = best_match_response_formatter (response_dict)
+            bot_input_with_name(response)      
     return 0
 
 
@@ -85,6 +85,3 @@ if __name__ == "__main__":
 
     config["TAB_WIDTH"] = " " * (len(config["BOT_NAME"]) + 2)
     chat_init()
-
-    
-    

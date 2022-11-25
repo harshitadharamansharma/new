@@ -301,6 +301,7 @@ def format_response_coursefee_for_category_for_course_college(response_dict):
                                                                     )  
     return generated_response
 
+
 def format_response_details_for_eligibility_of_course(response_dict):
     pass
 
@@ -309,4 +310,4 @@ def format_response_details_for_duration_of_course(response_dict):
 
 def format_response_details_for_duration_of_course(response_dict):
     pass
- 
+

@@ -114,7 +114,7 @@ def get_best_match_rule(query_set):
             return rulebase[rule]["rule_handler"]        
     return str(-1)  # if no match found 
         
-def call_response_formatter(query_set):
+def get_response_formatter(query_set):
     ''' parameter :-  set of keywords present in the query
         return:- response_formatter function from rulebase'''
     for rule in rulebase:
@@ -131,7 +131,6 @@ def invalid_query_prompt():
     "Not able to process this, could you repeat that",  "Didn't get what you want?", "Your query is either invalid or can't be processed", 
     "OK! let me process your query! Could you repeat that? ", " Wrong input!"]
     bot_print_with_name(random.choice(invalid_query_responses))
-
 
 
 def want_to_know_more_prompt(know_more_link):
