@@ -106,15 +106,25 @@ def get_keyword_dictionary_from_query(query):
 
 def get_best_match_rule(query_set):
     ''' parameter :-  set of keywords present in the query
-        return:- function from rulebase'''
+        return:- rule_handler function from rulebase'''
     for rule in rulebase:
         rule_format_set = set(str(rulebase[rule]["rule_format"]).split("_"))   # :b d:
         if rule_format_set == query_set :
             # print("yes")
-            return rulebase[rule]["rule_handler"]
-            
+            return rulebase[rule]["rule_handler"]        
     return str(-1)  # if no match found 
         
+def call_response_formatter(query_set):
+    ''' parameter :-  set of keywords present in the query
+        return:- response_formatter function from rulebase'''
+    for rule in rulebase:
+        rule_format_set = set(str(rulebase[rule]["rule_format"]).split("_"))   # :b d:
+        if rule_format_set == query_set :
+            # print("yes")
+            return rulebase[rule]["response_formatter"]        
+    return str(-1)  # if no match found 
+        
+
 
 def invalid_query_prompt():
     invalid_query_responses = [ "I didn't get this! can you please come again?",
@@ -131,6 +141,5 @@ def want_to_know_more_prompt(know_more_link):
 def do_you_mean_this_prompt():
     '''This function will be called for queries such as 'no. of faculty in college' to confirm wether the user meant the same as it was matched by the best_rule_match() method, or something else; the query is valid but no such entry is there in the university as no such heirachy exist. So rule with similar rokens will be asked otherwise, and will be confirmed via confirmation prompt..... (this can be coonsidered as second best match ,  (string vector position:- this is generally used for synonyms, but can also be experimented here )) ...'''
     pass
-
 
 
