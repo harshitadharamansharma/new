@@ -114,7 +114,7 @@ def get_number_of_departments_in_university(query_dict):
     response_dict["no_of_departments"] = len(departments_set)
    
     file_2.seek(0)
-    reader2.next()
+    next(reader2)
 
     return response_dict
 
@@ -154,7 +154,7 @@ def get_number_of_faculties_in_college(query_dict):
 def get_total_number_of_seats_for_course_at_college(query_dict):
     college = query_dict['college']
     course = query_dict['course']
-
+#############################
     for row in reader1:
         if row[0].lower() == college.lower() and row[1].lower() == course.lower():
             query_results = int(row[2])
@@ -180,13 +180,16 @@ def get_number_of_seats_for_category_for_course_at_college(query_dict):
     for row in reader1:
         if row[0].lower() == college.lower() and row[1].lower() == course.lower() :
             query_results = int(row[category_index_form_csv])
-
+##########################
     # query_results = 7 #logic to count total no. of seats for a course at a college  ; form the csv, --> available doc has seat matrix for category for course at all the colleges ; category,course,college
     response_dict = dict()
     response_dict["college"] = college
     response_dict["course"] = course
     response_dict["category"] = category
     response_dict["seats"] = query_results
+
+    file_1.seek(0)
+    next(reader1)
     
     return response_dict
 
@@ -195,12 +198,13 @@ def get_number_of_seats_for_category_for_course_at_college(query_dict):
 def get_number_of_courses_at_college(query_dict):
     if query_dict['entity'] == 'course' :
         college = query_dict['college']
-
-        courses_at_college_set = set()
-
-        for row in reader1:
+################################
+        courses_at_college_set = list()
+ 
+        for row in reader3:
             if row[0].lower() == college.lower():
-                courses_at_college_set.add(row[1].strip().title())
+                if row[1].strip().title() not in courses_at_college_set:
+                    courses_at_college_set.append(row[1].strip().title())
 
         query_results = len(courses_at_college_set)
 
@@ -209,9 +213,14 @@ def get_number_of_courses_at_college(query_dict):
         response_dict["college_set"] = courses_at_college_set
         response_dict["no_of_courses_at_college_set"] = query_results
 
+        file_3.seek(0)
+        next(reader3)   
+
         return response_dict
     else :
         get_number_of_colleges_offering_course(query_dict)
+
+
 
 
 
@@ -318,13 +327,16 @@ def get_number_of_department_under_faculty(query_dict):
     response_dict["faculty"] = faculty
     response_dict["department_under_faculty_set"] = department_under_faculty_set
 
+    file_2.seek(0)
+    next(reader2)
+
     return response_dict
 
 
 def get_number_of_colleges_offering_course(query_dict):
     if query_dict['entity'] == 'college':
         course = query_dict['course']
-
+#################################
         colleges_offering_course_set = set()
 
         for row in reader3:
@@ -334,6 +346,9 @@ def get_number_of_colleges_offering_course(query_dict):
         response_dict = dict()
         response_dict["course"] = course
         response_dict["colleges_offering_course_set"] = colleges_offering_course_set
+
+        file_3.seek(0)
+        next(reader3)
 
         return response_dict
     else:
@@ -349,52 +364,65 @@ def get_list_of_faculties_in_college(query_dict):
 
 def get_list_of_colleges_in_university(query_dict):
 
-    colleges_set = set()
-    for row in reader1:
-        colleges_set.add(row[0].strip().title())
+    colleges_set = list()
+    for row in reader4:
+        if row[0].strip().title() not in colleges_set:
+            colleges_set.append(row[0].strip().title())
         # print(row[0])
     
     response_dict = dict()
     response_dict["college_set"] = colleges_set
 
+    file_4.seek(0)
+    next(reader4)
+
     return response_dict
-
-
-
 
 
 def get_list_of_faculties_in_university(query_dict):
 
-    faculties_set = set()
+    faculties_set = list()
     for row in reader2:
-        faculties_set.add(row[0].strip().title())
+        if row[0].strip().title() not in faculties_set:
+            faculties_set.append(row[0].strip().title())   
 
     response_dict = dict() 
     response_dict["faculties_set"] = faculties_set
+
+    file_2.seek(0)
+    next(reader2)
 
     return response_dict
 
 
 def get_list_of_departments_in_university(query_dict):
 
-    departments_set = set()
+    departments_set = list()
     for row in reader2:
-        departments_set.add(row[1].strip().title())
+        if row[1].strip().title() not in departments_set:
+            departments_set.append(row[1].strip().title())
 
     response_dict = dict() 
     response_dict["departments_set"] = departments_set
+
+    file_2.seek(0)
+    next(reader2)
 
     return response_dict
 
 
 def get_list_of_courses_in_university(query_dict):
 
-    courses_set = set()
+    courses_set = list()
     for row in reader3:
-        courses_set.add(row[1].strip().title())
+        if row[1].strip().title() not in courses_set:
+            courses_set.append(row[1].strip().title())
 
     response_dict = dict() 
     response_dict["courses_set"] = courses_set
+
+    file_3.seek(0)
+    next(reader3)
     
     return response_dict
 
@@ -402,16 +430,20 @@ def get_list_of_courses_in_university(query_dict):
 def get_list_of_courses_at_college(query_dict):
     if query_dict['entity'] == 'course':
         college = query_dict['college']
-
-        courses_at_college_set = set()
+####################################
+        courses_at_college_set = list()
 
         for row in reader1:
-            if row[0].lower() == college.lower():
-                courses_at_college_set.add(row[1].strip().title())
+            if row[0].strip().lower() == college.strip().lower() :
+                if row[1].strip().title() not in courses_at_college_set:
+                    courses_at_college_set.append(row[1].strip().title())
         
         response_dict = dict() 
         response_dict["college"] = college
         response_dict["courses_at_college_set"] = courses_at_college_set
+
+        file_1.seek(0)
+        next(reader1)
 
         return response_dict
     else : 
@@ -523,11 +555,16 @@ def get_list_of_department_under_faculty(query_dict):
     response_dict["faculty"] = faculty
     response_dict["department_under_faculty_set"] = department_under_faculty_set   
 
+    file_2.seek(0)
+    next(reader2)
+
+    return response_dict
+
 
 def get_list_of_colleges_offering_course(query_dict):
     if query_dict['entity'] == 'college':
         course = query_dict['course']
-        
+###############################        
         colleges_offering_course_set = set()
 
         for row in reader3:
@@ -538,6 +575,9 @@ def get_list_of_colleges_offering_course(query_dict):
         response_dict["course"] = course
         response_dict["colleges_offering_course_set"] = colleges_offering_course_set
         
+        file_2.seek(0)
+        next(reader2)
+
         return response_dict
 
     else:
@@ -557,7 +597,7 @@ def get_coursefee_for_category_for_course_college(query_dict):
     college = query_dict['college']
     course = query_dict['course']
     category = query_dict['category']
-
+##################################
     category_index_form_csv = header4.index(category)
 
     for row in reader4:
@@ -569,6 +609,9 @@ def get_coursefee_for_category_for_course_college(query_dict):
     response_dict["course"] = course
     response_dict["category"] = category
     response_dict["coursefee"] = query_results
+
+    file_4.seek(0)
+    next(reader4)
 
     return response_dict
     

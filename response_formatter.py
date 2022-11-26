@@ -136,7 +136,7 @@ def format_response_list_of_colleges_in_university(response_dict):
 
     serial_no = 1
     final_output_list = ''
-    for i in response_dict["colleges_set"]:
+    for i in response_dict["college_set"]:
         a = "\n" + str(serial_no)+ ". " + i 
         final_output_list += a
         serial_no += 1
@@ -145,7 +145,7 @@ def format_response_list_of_colleges_in_university(response_dict):
                         "There are {no_of_colleges} offering Undrgraduate courses at the university. Here is the list of all the colleges at DU:- \n{s}", 
                         "There are {no_of_colleges} colleges affiliated by the University. Here is the list of all the colleges at DU:- \n{s}" 
                         ]
-    generated_response = (random.choice(possible_responses)).format(no_of_colleges = len(response_dict["colleges_set"]), 
+    generated_response = (random.choice(possible_responses)).format(no_of_colleges = len(response_dict["college_set"]), 
                                                                     s = final_output_list )   
     # print(str(generated_response)) 
     return generated_response 
@@ -195,10 +195,11 @@ def format_response_list_of_courses_in_university(response_dict):
         a = "\n" + str(serial_no)+ ". " + i 
         final_output_list += a
         serial_no += 1
-
+    # print(final_output_list)
     possible_responses = ["There are {no_of_courses} UG courses offered the university. Here is the list of all the courses at DU:- \n{s}", 
                         "There are {no_of_courses} undergrad courses at the University. Here is the list of all the courses at DU:- \n{s}", 
-                        "{no_of_courses} UG courses are there at DU.", "You can choose among {no_of_courses} for your UG degree at DU. Here is the list of all the courses at DU:- \n{s}" 
+                        "{no_of_courses} UG courses are there at DU.  Here is the list of all the courses at DU:- \n{s}", 
+                        "You can choose among {no_of_courses} courses for your UG degree at DU. Here is the list of all the courses at DU:- \n{s}" 
                         ]
     generated_response = (random.choice(possible_responses)).format(
                                                                     no_of_courses = len(response_dict["courses_set"]), 

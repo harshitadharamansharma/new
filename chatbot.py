@@ -13,8 +13,8 @@ def show_greeting():
 
     # bot_print_with_name(f"Hello! I am {config["BOT_NAME"].title()}. You can ask me your UG admissions related queries.")    
     bot_print_with_name(" Hi! What are you looking for?")
-    bot_print("Let me know how can I help you.")
-    bot_print(" What are you looking for?")
+    bot_print("Let me know your queries.")
+    # bot_print(" What are you looking for?")
     bot_print("At any point, if you wish to abort the chat, type QUIT")
 
 
@@ -81,7 +81,7 @@ def chat_init():
 
 
 
-if __name__ == "__main__":
+# if __name__ == "__main__":
 
-    config["TAB_WIDTH"] = " " * (len(config["BOT_NAME"]) + 2)
-    chat_init()
+#     config["TAB_WIDTH"] = " " * (len(config["BOT_NAME"]) + 2)
+#     chat_init()
