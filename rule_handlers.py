@@ -67,7 +67,6 @@ header4 = next(reader4)
 
 
 def get_number_of_colleges_in_university  (query_dict): 
-
     colleges_set = set()
 
     for row in reader4:
@@ -158,6 +157,7 @@ def get_total_number_of_seats_for_course_at_college(query_dict):
     for row in reader1:
         if row[0].lower() == college.lower() and row[1].lower() == course.lower():
             query_results = int(row[2])
+            print(row[2])
 
     response_dict = dict()
     response_dict["college"] = college
@@ -630,3 +630,8 @@ def get_details_for_duration_of_course(query_dict):
 def get_details_for_syllabus_of_course(query_dict):
     #csv course_eligibility_syllabus_duration_about_...
     return "details will get updated soon"
+
+
+def rule_for_programme(query_dict):
+    
+    pass

@@ -1,7 +1,10 @@
 synonyms = {
 
-    # "BSc": ["bsc", "bachelor of sciences", "bachelor of science", "B Sc"," bsc"],
+    # "BSc": ["bsc", "bachelor of sciences", "bachelor of science", "B Sc"," ],
     # "BA": ["ba", "bachelor of arts", "bachelor of art", "b a"],
+
+    
+
     "Economics": ["economics", "economic", "economy"],
     "History": ["history"],
     "Number": ["number" , "how many", "how much", "what are the number", "what are the no.", "get me the number"],
@@ -150,6 +153,15 @@ synonyms = {
     "bachelor of arts (H) Sociology":["bachelor of arts (h) sociology"],
     "bachelor of arts (Prog.)":["bachelor of arts (prog.)"],
     "bachelor of arts (H) Economics":["bachelor of arts (h) economics"],
-    "bachelor of commerce (H)":["bachelor of commerce (h)"]
+    "bachelor of commerce (H)":["bachelor of commerce (h)"],
+
+    "BA": ["ba", "bachelor of arts", "bachelor of art", "b.a.", "b a"], 
+    "BSC": ["bsc", "bachelor of sciences", "bachelor of science", "b.sc.", "b sc"], 
+    "BCOM": ["bcom", "bachelor of commerce", "b.com.", "b com"], 
+    "BVOC": ["bvoc", "bachelor of vocational studies", "bachelor of vocational study", "b.voc.", "b voc"], 
+    "BJ": ["bj", "bachelor of journalism", "b.j.", "b j"],
+    "honours": ["honours", "(H)", "honors", "hons", "honor", "honour"], 
+    "program": ["program", "prog", "programme", "progr"], 
+    "pass": ["pass", "pas"]
 
 }
