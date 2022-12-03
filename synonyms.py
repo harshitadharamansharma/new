@@ -155,13 +155,16 @@ synonyms = {
     "bachelor of arts (H) Economics":["bachelor of arts (h) economics"],
     "bachelor of commerce (H)":["bachelor of commerce (h)"],
 
-    "BA": ["ba", "bachelor of arts", "bachelor of art", "b.a.", "b a"], 
-    "BSC": ["bsc", "bachelor of sciences", "bachelor of science", "b.sc.", "b sc"], 
-    "BCOM": ["bcom", "bachelor of commerce", "b.com.", "b com"], 
-    "BVOC": ["bvoc", "bachelor of vocational studies", "bachelor of vocational study", "b.voc.", "b voc"], 
-    "BJ": ["bj", "bachelor of journalism", "b.j.", "b j"],
+    "B.A.": ["ba", "bachelor of arts", "bachelor of art", "b.a.", "b a"], 
+    "B.SC.": ["bsc", "bachelor of sciences", "bachelor of science", "b.sc.", "b sc"], 
+    "B.COM.": ["bcom", "bachelor of commerce", "b.com.", "b com"], 
+    "B.VOC.": ["bvoc", "bachelor of vocational studies", "bachelor of vocational study", "b.voc.", "b voc"], 
+    "B.J.": ["bj", "bachelor of journalism", "b.j.", "b j"],
+    "B.TECH.": ["b.tech."],
     "honours": ["honours", "(H)", "honors", "hons", "honor", "honour"], 
-    "program": ["program", "prog", "programme", "progr"], 
-    "pass": ["pass", "pas"]
+    "program": ["program", "prog", "progr"], 
+    "pass": ["pass", "pas"],
+    "vocational studies": [],
+    "programme": ["programme"]
 
 }

@@ -1,7 +1,6 @@
 from rule_handlers import *
 from response_formatter import *
 
-# logic for slot filling can be written 
 
 rulebase = {
     1: {
@@ -20,9 +19,9 @@ rulebase = {
         "response_formatter": format_response_number_of_departments_in_university
     },
     4:  {  
-        "rule_format": "quantifier_course",
-        "rule_handler": get_number_of_courses_in_university,
-        "response_formatter": format_response_number_of_courses_in_university
+        "rule_format": "quantifier_programme",  #_programme
+        "rule_handler": get_number_of_programmes_in_university,
+        "response_formatter": format_response_number_of_programmes_in_university
     },
     5:  {  
         "rule_format": "quantifier_faculty_college",
@@ -30,20 +29,20 @@ rulebase = {
         "response_formatter": format_response_number_faculties_in_college
     },
     6:  {  
-        "rule_format": "quantifier_seats_course_college",
-        "rule_handler": get_total_number_of_seats_for_course_at_college,
-        "response_formatter": format_response_total_number_of_seats_for_course_at_college
+        "rule_format": "quantifier_seats_degree_degreetype_course_college",
+        "rule_handler": get_total_number_of_seats_for_degree_degreetype_course_at_college,
+        "response_formatter": format_response_total_number_of_seats_for_degree_degreetype_course_at_college
     },
 
     7:  {  
         "rule_format": "quantifier_seats_category_course_college",
-        "rule_handler": get_number_of_seats_for_category_for_course_at_college,
-        "response_formatter": format_response_number_of_seats_for_category_for_course_at_college
+        "rule_handler": get_number_of_seats_for_category_for_degree_degreetype_course_at_college,
+        "response_formatter": format_response_number_of_seats_for_category_for_degree_degreetype_course_at_college
     },
     8:  {  
         "rule_format": "quantifier_course_college",
-        "rule_handler": get_number_of_courses_at_college,
-        "response_formatter": format_response_number_of_courses_at_college
+        "rule_handler": get_number_of_programmes_at_college,
+        "response_formatter": format_response_number_of_programmes_at_college
     },
     9:  {  
         "rule_format": "quantifier_course_faculty",
@@ -76,9 +75,9 @@ rulebase = {
         "response_formatter": format_response_number_of_department_under_faculty
     },
     15:  {  
-        "rule_format": "quantifier_college_course",
-        "rule_handler": get_number_of_colleges_offering_course,
-        "response_formatter": format_response_number_of_colleges_offering_course
+        "rule_format": "quantifier_college_degree_degreetype_course",
+        "rule_handler": get_number_of_colleges_offering_degree_degreetype_course,
+        "response_formatter": format_response_number_of_colleges_offering_degree_degreetype_course
     },
     16:  {  
         "rule_format": "show_faculty_college",
@@ -103,14 +102,14 @@ rulebase = {
         "response_formatter": format_response_list_of_departments_in_university
     },
     20:  {  
-        "rule_format": "show_course",
-        "rule_handler": get_list_of_courses_in_university,
-        "response_formatter": format_response_list_of_courses_in_university
+        "rule_format": "show_programmes",
+        "rule_handler": get_list_of_programmes_in_university,
+        "response_formatter": format_response_list_of_programmes_in_university
     },
     21:  {  
-        "rule_format": "show_course_college",
-        "rule_handler": get_list_of_courses_at_college,
-        "response_formatter": format_response_list_of_courses_at_college
+        "rule_format": "show_programmes_college",
+        "rule_handler": get_list_of_programmes_at_college,
+        "response_formatter": format_response_list_of_programmes_at_college
     },
     22:  {  
         "rule_format": "show_course_faculty",
@@ -143,39 +142,49 @@ rulebase = {
         "response_formatter": format_response_list_of_department_under_faculty
     },
     28:  {  
-        "rule_format": "show_college_course",
-        "rule_handler": get_list_of_colleges_offering_course,
-        "response_formatter": format_response_list_of_colleges_offering_course
+        "rule_format": "show_college_degree_degreetype_course",
+        "rule_handler": get_list_of_colleges_offering_degree_degreetype_course,
+        "response_formatter": format_response_list_of_colleges_offering_degree_degreetype_course
     },
     29:  {  
-        "rule_format": "show_details_cutoff_category_course_college",
-        "rule_handler": get_cutoff_for_category_for_course_college,
-        "response_formatter": format_response_cutoff_for_category_for_course_college
+        "rule_format": "show_details_cutoff_category_degree_degreetype_course_college",
+        "rule_handler": get_cutoff_for_category_for_degree_degreetype_course_college,
+        "response_formatter": format_response_cutoff_for_category_for_degree_degreetype_course_college
     },
     30:  {  
-        "rule_format": "show_details_cutoff_course_college",
-        "rule_handler": get_cutoff_for_course_for_college,
-        "response_formatter": format_response_cutoff_for_course_for_college
-        # SLOT filling ; implementation:- we can combine rule 30 and 29; if category is not in the query we can ask this from the user; 
+        "rule_format": "show_details_cutoff_degree_degreetype_course_college",
+        "rule_handler": get_cutoff_for_degree_degreetype_course_for_college,
+        "response_formatter": format_response_cutoff_for_degree_degreetype_course_for_college
     },
     31:  {  
-        "rule_format": "show_details_coursefee_category_course_college",
-        "rule_handler": get_coursefee_for_category_for_course_college,
-        "response_formatter": format_response_coursefee_for_category_for_course_college
+        "rule_format": "show_details_coursefee_category_degree_degreetype_course_college",
+        "rule_handler": get_coursefee_for_category_for_degree_degreetype_course_college,
+        "response_formatter": format_response_coursefee_for_category_for_degree_degreetype_course_college
     },
     32:  {  
-        "rule_format": "show_details_eligibility_course",
-        "rule_handler": get_details_for_eligibility_of_course,
-        "response_formatter": format_response_details_for_eligibility_of_course
+        "rule_format": "show_details_eligibility_degree_degreetype_course",
+        "rule_handler": get_details_for_eligibility_of_degree_degreetype_course,
+        "response_formatter": format_response_details_for_eligibility_of_degree_degreetype_course
     },
     33:  {  
-        "rule_format": "show_details_duration_course",
-        "rule_handler": get_details_for_duration_of_course,
-        "response_formatter": format_response_details_for_duration_of_course
+        "rule_format": "show_details_duration_degree_degreetype_course",
+        "rule_handler": get_details_for_duration_of_degree_degreetype_course,
+        "response_formatter": format_response_details_for_duration_of_degree_degreetype_course
     },
     34:  {  
-        "rule_format": "show_details_syllabus_course",
-        "rule_handler": get_details_for_syllabus_of_course,
-        "response_formatter": format_response_details_for_duration_of_course
-    },
+        "rule_format": "show_details_syllabus_degree_degreetype_course",
+        "rule_handler": get_details_for_syllabus_of_degree_degreetype_course,
+        "response_formatter": format_response_details_for_duration_of_degree_degreetype_course
+    }
+    # ,
+    # 35:  {  
+    #     "rule_format": "get_number_course_degree",
+    #     "rule_handler": get_number_of_courses_under_degree,
+    #     "response_formatter": format_response_number_of_courses_under_degree
+    # },
+    # 36:  {  
+    #     "rule_format": "show_course_degree",
+    #     "rule_handler": get_list_of_courses_under_degree,
+    #     "response_formatter": format_response_list_of_courses_under_degree
+    # }
 }

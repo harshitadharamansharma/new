@@ -1,0 +1,127 @@
+name of the college,degree,degreetype,course,ur,obc,ews,minority,sc,st,pwd,total seats,ur,obc,ews,minority,sc,st
+acharya narendra dev college,b.com.,honours,d,7965,7965,7965,7965,7965,7965,7965,125,50,34,13,na,19,9
+acharya narendra dev college,b.sc. ,honours,biomedical science,18965,18965,18965,18965,18965,18965,2555,63,26,17,6,na,9,5
+acharya narendra dev college,b.sc.,honours,botany,7965,7965,7965,7965,7965,7965,2555,63,26,17,6,na,9,5
+acharya narendra dev college,b.sc.,honours,chemistry,8465,8465,8465,8465,8465,8465,2555,63,26,17,6,na,9,5
+acharya narendra dev college,b.sc.,honours,  computer science,22965,22965,22965,22965,22965,22965,2555,63,26,17,6,na,9,5
+acharya narendra dev college,b.sc.,honours,  electronics,7965,7965,7965,7965,7965,7965,2555,63,26,17,6,na,9,5
+acharya narendra dev college,b.sc.,honours,  mathematics,7965,7965,7965,7965,7965,7965,2555,63,26,17,6,na,9,5
+acharya narendra dev college,b.sc.,honours,  physics,7965,7965,7965,7965,7965,7965,2555,63,26,17,6,na,9,5
+acharya narendra dev college,b.sc.,honours,  zoology,7965,7965,7965,7965,7965,7965,2555,63,26,17,6,na,9,5
+acharya narendra dev college,b.sc.,d , life sciences,7965,7965,7965,7965,7965,7965,2555,56,23,15,6,na,8,4
+acharya narendra dev college,b.sc.,d ,physical science with chemistry,7965,7965,7965,7965,7965,7965,2555,56,23,15,6,na,8,4
+acharya narendra dev college,b.sc.,d ,physical science with computer science,7965,7965,7965,7965,7965,7965,2555,56,23,15,6,na,8,4
+acharya narendra dev college,b.sc.,d ,physical science with electronics,7965,7965,7965,7965,7965,7965,2555,56,23,15,6,na,8,4
+aditi mahavidyalaya(w),b.a.,program,link,4160,4160,4160,4160,4160,4160,405,673,272,182,68,na,101,50
+aditi mahavidyalaya(w),b.a.,honours,  geography,5660,5660,5660,5660,5660,5660,405,39,16,10,4,na,6,3
+aditi mahavidyalaya(w),b.a.,honours,  hindi journalism,7310,7310,7310,7310,7310,7310,405,56,22,15,7,na,8,4
+aditi mahavidyalaya(w),b.a.,honours,  social work,5710,5710,5710,5710,5710,5710,405,56,22,15,7,na,8,4
+aditi mahavidyalaya(w),b.com.,honours, d,5660,5660,5660,5660,5660,5660,405,68,27,18,8,na,10,5
+aditi mahavidyalaya(w),b.com.,program, program,5160,5160,5160,5160,5160,5160,405,56,22,15,7,na,8,4
+aryabhatta college,b.a. ,honours,  economics,13830,13830,13830,13830,13830,13830,784,58,23,16,6,na,9,4
+aryabhatta college,b.a.,honours,  english,13830,13830,13830,13830,13830,13830,784,58,23,16,6,na,9,4
+aryabhatta college,b.a.,honours,  hindi,13830,13830,13830,13830,13830,13830,784,58,23,16,6,na,9,4
+aryabhatta college,b.a.,honours,  history,13830,13830,13830,13830,13830,13830,784,58,23,16,6,na,9,4
+aryabhatta college,b.a.,honours,  political science,13830,13830,13830,13830,13830,13830,784,58,23,16,6,na,9,4
+aryabhatta college,b.a.,honours,  psychology,15830,15830,15830,15830,15830,15830,784,58,23,16,6,na,9,4
+aryabhatta college,b.sc.,honours, computer science,29130,29130,29130,29130,29130,29130,784,58,23,16,6,na,9,4
+aryabhatta college,b.sc.,honours, mathematics,15830,15830,15830,15830,15830,15830,784,58,23,16,6,na,9,4
+aryabhatta college,b.com.,honours,d,13830,13830,13830,13830,13830,13830,784,58,23,16,6,na,9,4
+aryabhatta college,b.com.,program,d,13830,13830,13830,13830,13830,13830,784,65,26,18,6,na,10,5
+aryabhatta college,b.a.,program,link,13830,13830,13830,13830,13830,13830,784,83,26,18,6,na,10,5
+atma ram sanatan dharma college,b.com.,program,d,10785,10785,10785,10785,10785,10785,525,193,77,52,21,na,29,14
+atma ram sanatan dharma college,b.com.,honours,d,12185,12185,12185,12185,12185,12185,525,174,71,47,17,na,26,13
+atma ram sanatan dharma college,b. a.,program,link,10785,10785,10785,10785,10785,10785,525,118,45,32,14,na,18,9
+atma ram sanatan dharma college,b.a.,honours,  english,10985,10985,10985,10985,10985,10985,525,49,19,13,6,na,7,4
+atma ram sanatan dharma college,b.a.,honours,  hindi,10985,10985,10985,10985,10985,10985,525,49,19,13,6,na,7,4
+atma ram sanatan dharma college,b.a.,honours,  history,10985,10985,10985,10985,10985,10985,525,49,19,13,6,na,7,4
+atma ram sanatan dharma college,b.a.,honours,  political science,10985,10985,10985,10985,10985,10985,525,96,38,26,11,na,14,7
+atma ram sanatan dharma college,b.a.,honours,  economics,10985,10985,10985,10985,10985,10985,525,96,38,26,11,na,14,7
+atma ram sanatan dharma college,b.sc.,honours,  physics,12075,12075,12075,12075,12075,12075,525,86,35,23,9,na,13,6
+atma ram sanatan dharma college,b.sc.,honours,  chemistry,12075,12075,12075,12075,12075,12075,525,86,35,23,9,na,13,6
+atma ram sanatan dharma college,b.sc.,honours,  mathematics,12075,12075,12075,12075,12075,12075,525,96,38,26,11,na,14,7
+atma ram sanatan dharma college,b.sc.,honours,  electronics,12075,12075,12075,12075,12075,12075,525,39,16,11,3,na,6,3
+atma ram sanatan dharma college,b.sc.,honours,  computer science,50500,50500,50500,50500,50500,50500,38200,58,24,16,5,na,9,4
+atma ram sanatan dharma college,b.sc.,program,physical science with chemistry,13345,13345,13345,13345,13345,13345,525,77,31,21,7,na,12,6
+atma ram sanatan dharma college,b.sc.,program,physical science with electronics,13345,13345,13345,13345,13345,13345,525,77,31,21,7,na,12,6
+atma ram sanatan dharma college,b.sc.,program,physical science with computer science,13345,13345,13345,13345,13345,13345,525,75,31,20,7,na,11,5
+atma ram sanatan dharma college,b.sc.,program,"applied physical sciences with industrial
+chemistry",13345,13345,13345,13345,13345,13345,525,57,24,15,5,na,9,4
+bhagini nivedita college,b.a.,program,link,6060,6060,6060,6060,6060,6060,170,510,207,137,51,na,77,38
+bhagini nivedita college,b.com.,honours,d,5260,5260,5260,5260,5260,5260,170,115,46,31,12,na,17,9
+bhagini nivedita college,b.a.,honours,  hindi,5260,5260,5260,5260,5260,5260,170,58,23,16,6,na,9,4
+bhagini nivedita college,b.a.,honours,  history,5260,5260,5260,5260,5260,5260,170,58,23,16,6,na,9,4
+bhagini nivedita college,b.a.,honours,political science,5260,5260,5260,5260,5260,5260,170,58,23,16,6,na,9,4
+bhagini nivedita college,b.sc.,d,physical science with chemistry,6760,6760,6760,6760,6760,6760,170,44,18,12,4,na,7,3
+bhagini nivedita college,b.sc.,d,physical science with computer science,6760,6760,6760,6760,6760,6760,170,44,18,12,4,na,7,3
+bhagini nivedita college,b.sc.,honours,  home science,6060,6060,6060,6060,6060,6060,170,40,16,11,4,na,6,3
+bhagini nivedita college,b.sc.,honours,   physics,6760,6760,6760,6760,6760,6760,170,58,23,16,6,na,9,4
+bharati college,b.a.,honours,  english,10465,10465,10465,10465,10465,10465,1075,78,31,21,8,na,12,6
+bharati college,b.a.,honours,  hindi,10465,10465,10465,10465,10465,10465,1075,78,31,21,8,na,12,6
+bharati college,b.a.,honours,  sanskrit,10465,10465,10465,10465,10465,10465,1075,78,31,21,8,na,12,6
+bharati college,b.a.,honours,  history,10465,10465,10465,10465,10465,10465,1075,78,31,21,8,na,12,6
+bharati college,b.a.,honours,  political science,10465,10465,10465,10465,10465,10465,1075,78,31,21,8,na,12,6
+bharati college,b.a.,honours,  journalism,10465,10465,10465,10465,10465,10465,1075,57,23,15,6,na,9,4
+bharati college,b.sc.,honours,  psychology,11965,11965,11965,11965,11965,11965,1075,57,23,15,6,na,9,4
+bharati college,b.a.,honours,  sociology,10465,10465,10465,10465,10465,10465,1075,57,23,15,6,na,9,4
+bharati college,b.sc.,honours,  mathematics,10465,10465,10465,10465,10465,10465,1075,57,23,15,6,na,9,4
+bharati college,b.com.,honours,d,10465,10465,10465,10465,10465,10465,1075,151,61,41,15,na,23,11
+bharati college,b. com.,d,d,10465,10465,10465,10465,10465,10465,1075,192,78,52,19,na,29,14
+bhaskaracharya college of applied sciences,b.sc.,honours,biomedical science,23020,23020,23020,23020,23020,23020,9410,59,24,16,6,na,9,4
+bhaskaracharya college of applied sciences,b.sc.,honours,  botany,13020,13020,13020,13020,13020,13020,9410,40,16,11,4,na,6,3
+bhaskaracharya college of applied sciences,b.sc.,honours,  chemistry,13020,13020,13020,13020,13020,13020,9410,40,16,11,4,na,6,3
+bhaskaracharya college of applied sciences,b.sc.,honours,  computer science,28020,28020,28020,28020,28020,28020,9410,59,24,16,6,na,9,4
+bhaskaracharya college of applied sciences,b.sc.,honours,  electronics,13020,13020,13020,13020,13020,13020,9410,59,24,16,6,na,9,4
+bhaskaracharya college of applied sciences,b.sc.,honours,  food technology,13020,13020,13020,13020,13020,13020,9410,59,24,16,6,na,9,4
+bhaskaracharya college of applied sciences,b.sc.,honours, instrumentation,13020,13020,13020,13020,13020,13020,9410,59,24,16,6,na,9,4
+bhaskaracharya college of applied sciences,b.sc.,honours,  microbiology,13020,13020,13020,13020,13020,13020,9410,40,16,11,4,na,6,3
+bhaskaracharya college of applied sciences,b.sc.,honours,  physics,13020,13020,13020,13020,13020,13020,9410,40,16,11,4,na,6,3
+bhaskaracharya college of applied sciences,b.sc.,honours,  polymer science,23020,23020,23020,23020,23020,23020,9410,59,24,16,6,na,9,4
+bhaskaracharya college of applied sciences,b.sc.,honours,  zoology,13020,13020,13020,13020,13020,13020,9410,40,16,11,4,na,6,3
+college of vocational studies,b.a.,vocational studies, office management and secretarial practice,10150,10150,10150,10150,10150,10150,75,111,45,30,11,na,17,8
+college of vocational studies,b.a.,vocational studies, marketing management and retail business,10150,10150,10150,10150,10150,10150,75,125,51,34,13,na,19,9
+college of vocational studies,b.a.,vocational studies, human resource management,10150,10150,10150,10150,10150,10150,75,125,51,34,13,na,19,9
+college of vocational studies,b.a.,vocational studies, small and medium enterprises,10150,10150,10150,10150,10150,10150,75,63,25,17,6,na,9,5
+college of vocational studies,b.a.,vocational studies, management and marketing of insurance,10150,10150,10150,10150,10150,10150,75,63,25,17,6,na,9,5
+college of vocational studies,b.a.,vocational studies,material management,10150,10150,10150,10150,10150,10150,75,63,25,17,6,na,9,5
+college of vocational studies,b.a.,vocational studies,tourismmanagement,10150,10150,10150,10150,10150,10150,75,125,51,34,13,na,19,9
+college of vocational studies,b.com.,honours,d,10150,10150,10150,10150,10150,10150,75,96,39,26,10,na,14,7
+college of vocational studies,b.a.,honours,economics,10150,10150,10150,10150,10150,10150,75,78,31,21,8,na,12,6
+college of vocational studies,b.a.,honours, history,10150,10150,10150,10150,10150,10150,75,78,31,21,8,na,12,6
+college of vocational studies,b.sc.,honours, computer  science,41000,41000,41000,41000,41000,41000,75,58,23,16,6,na,9,4
+college of vocational studies,b.a.,honours, english,10150,10150,10150,10150,10150,10150,75,58,23,16,6,na,9,4
+college of vocational studies,b.a.,honours, hindi,10150,10150,10150,10150,10150,10150,75,58,23,16,6,na,9,4
+daulat ram college,b.a.,honours,economics,15890,15890,15890,15890,15890,15890,1155,115,47,31,11,na,17,9
+daulat ram college,b.a.,honours,english,15890,15890,15890,15890,15890,15890,1155,78,31,21,8,na,12,6
+daulat ram college,b.a.,honours,hindi,15890,15890,15890,15890,15890,15890,1155,115,47,31,11,na,17,9
+daulat ram college,b.a.,honours,history,15890,15890,15890,15890,15890,15890,1155,58,23,16,6,na,9,4
+daulat ram college,b.a.,honours,music,16540,16540,16540,16540,16540,16540,1155,29,12,8,3,na,4,2
+daulat ram college,b.a.,honours,philosophy,15890,15890,15890,15890,15890,15890,1155,49,19,13,5,na,8,4
+daulat ram college,b.a.,honours,political science,15890,15890,15890,15890,15890,15890,1155,115,47,31,11,na,17,9
+daulat ram college,b.a.,honours,psychology,17490,17490,17490,17490,17490,17490,1155,46,19,12,5,na,7,3
+daulat ram college,b.a.,honours,sanskrit,15890,15890,15890,15890,15890,15890,1155,46,19,12,5,na,7,3
+daulat ram college,b.a., program,link,**,**,**,**,**,**,1155,211,87,57,19,na,32,16
+daulat ram college,b.com., d,d,16890,16890,16890,16890,16890,16890,1155,96,39,26,10,na,14,7
+daulat ram college,b.com. (h),honours,d,16890,16890,16890,16890,16890,16890,1155,139,56,38,14,na,21,10
+daulat ram college,b.sc.,honours,biochemistry,19480,19480,19480,19480,19480,19480,1155,29,12,8,3,na,4,2
+daulat ram college,b.sc.,honours,botany,19540,19540,19540,19540,19540,19540,1155,58,23,16,6,na,9,4
+daulat ram college,b.sc.,honours,chemistry,19480,19480,19480,19480,19480,19480,1155,29,12,8,3,na,4,2
+daulat ram college,b.sc.,honours,mathematics,18370,18370,18370,18370,18370,18370,1155,58,23,16,6,na,9,4
+daulat ram college,b.sc.,honours,physics,19540,19540,19540,19540,19540,19540,1155,58,23,16,6,na,9,4
+daulat ram college,b.sc.,honours,zoology,18570,18570,18570,18570,18570,18570,1155,58,23,16,6,na,9,4
+daulat ram college,b.sc. ,d, life sciences,18580,18580,18580,18580,18580,18580,1155,78,31,21,8,na,12,6
+daulat ram college,b.a.,program,link,18140,18140,18140,18140,18140,18140,1155,241,85,57,21,na,32,16
+deen dayal upadhyaya college,b.a.,honours,english,19545,19545,19545,19545,19545,19545,1730,40,16,11,4,na,6,3
+deen dayal upadhyaya college,b.com.,honours,d,18745,18745,18745,18745,18745,18745,1730,154,62,42,15,na,23,12
+deen dayal upadhyaya college,b.sc.,honours,  botany,19345,19345,19345,19345,19345,19345,1730,40,16,11,4,na,6,3
+deen dayal upadhyaya college,b.sc.,honours,  chemistry,19345,19345,19345,19345,19345,19345,1730,40,16,11,4,na,6,3
+deen dayal upadhyaya college,b.sc.,honours,  computer science,36145,36145,36145,36145,36145,36145,1730,60,24,16,6,na,9,5
+deen dayal upadhyaya college,b.sc.,honours,  electronics,20345,20345,20345,20345,20345,20345,1730,60,24,16,6,na,9,5
+deen dayal upadhyaya college,b.sc.,honours,  mathematics,18945,18945,18945,18945,18945,18945,1730,78,31,21,8,na,12,6
+deen dayal upadhyaya college,b.sc.,honours,  physics,19345,19345,19345,19345,19345,19345,1730,60,24,16,6,na,9,5
+deen dayal upadhyaya college,b.sc.,honours,  zoology,19345,19345,19345,19345,19345,19345,1730,40,16,11,4,na,6,3
+deen dayal upadhyaya college,b.sc. ,d, life science,19745,19745,19745,19745,19745,19745,1730,40,16,11,4,na,6,3
+deen dayal upadhyaya college,b.sc.,d,physical science with chemistry,19345,19345,19345,19345,19345,19345,1730,40,16,11,4,na,6,3
+deen dayal upadhyaya college,b.sc.,d,physical science with computer science,19345,19345,19345,19345,19345,19345,1730,40,16,11,4,na,6,3
+deen dayal upadhyaya college,b.sc.,d, mathematical science,19345,19345,19345,19345,19345,19345,1730,40,16,11,4,na,6,3
+deen dayal upadhyaya college,b.a.,d, program,18545,18545,18545,18545,18545,18545,1730,120,48,33,12,na,18,9

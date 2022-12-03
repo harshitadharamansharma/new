@@ -125,7 +125,6 @@ def get_response_formatter(query_set):
     return str(-1)  # if no match found 
         
 
-
 def invalid_query_prompt():
     invalid_query_responses = [ "I didn't get this! can you please come again?",
     "Not able to process this, could you repeat that",  "Didn't get what you want?", "Your query is either invalid or can't be processed", 

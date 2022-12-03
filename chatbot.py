@@ -64,7 +64,21 @@ def chat_init():
         if 'entity' in keyword_classes_dictionary.keys():    
             query_token_set.add(keyword_classes_dictionary['entity'])
             query_token_set.remove('entity')
-        # print(query_token_set)
+        
+
+        if 'degree' in keyword_classes_dictionary.keys() and 'degreetype' in keyword_classes_dictionary.keys() and 'course' not in keyword_classes_dictionary.keys():
+            keyword_classes_dictionary['course'] = "d"
+            query_token_set.add(keyword_classes_dictionary['course'])
+
+        elif 'degree' in keyword_classes_dictionary.keys() and 'degreetype' not in keyword_classes_dictionary.keys() and 'course' not in keyword_classes_dictionary.keys():
+            keyword_classes_dictionary['course'] = "d"
+            query_token_set.add(keyword_classes_dictionary['course'])  
+            keyword_classes_dictionary['degreetype'] = "d"
+            query_token_set.add(keyword_classes_dictionary['degreetype'])
+
+
+        print(keyword_classes_dictionary)
+        print(query_token_set)
 
         best_match_rule = get_best_match_rule(query_token_set)
  
