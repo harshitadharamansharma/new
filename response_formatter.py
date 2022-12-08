@@ -57,6 +57,7 @@ def format_response_number_faculties_in_college(response_dict):
 
 
 def format_response_total_number_of_seats_for_degree_degreetype_course_at_college(response_dict):
+    generated_response = str()
     if response_dict["programme_not_available_flag"] == True:
         generated_response == "This Programme is not available in this college."
     else:
@@ -83,11 +84,11 @@ def format_response_number_of_seats_for_category_for_degree_degreetype_course_at
                             ]
     generated_response = (random.choice(possible_responses)).format(
                                                                     no_of_seats = response_dict["seats"],
-                                                                    clg = response_dict["college"], 
-                                                                    dg = response_dict["degree"],
+                                                                    clg = response_dict["college"].title(), 
+                                                                    dg = response_dict["degree"].title(),
                                                                     dt = response_dict["degreetype"],
-                                                                    crs = response_dict["course"],
-                                                                    ctgry = response_dict["category"],
+                                                                    crs = response_dict["course"].title(),
+                                                                    ctgry = response_dict["category"].upper(),
                                                                     )
     generated_response_with_link = check_and_add_available_link_in_response(response_dict,generated_response)   
     return generated_response_with_link
@@ -95,10 +96,10 @@ def format_response_number_of_seats_for_category_for_degree_degreetype_course_at
 
 def format_response_number_of_programmes_at_college(response_dict):
     possible_responses = [
-                        "There are {no_of_prgms} courses at {clg}", 
-                        "{no_of_prgms} courses are there at {clg}"]
+                        "There are {no_of_prgms} programmes at {clg}", 
+                        "{no_of_prgms} programmes are there at {clg}"]
     generated_response = (random.choice(possible_responses)).format(
-                                                                    no_of_prgms = len(response_dict["no_of_programmes_at_college_set"]),
+                                                                    no_of_prgms = response_dict["no_of_programmes_at_college_set"],
                                                                     clg = response_dict["college"]
                                                                     )  
     return generated_response
@@ -124,16 +125,16 @@ def format_response_number_of_department_under_faculty_at_college(response_dict)
     return "data is not available"
 
 def format_response_number_of_department_under_faculty(response_dict):
-    possible_responses = [
-                        "There are {no_of_departments} departments under {ffaculty}.", 
-                        "{no_of_departments} departments are there under {ffaculty}."
-                        ]
-    generated_response = (random.choice(possible_responses)).format(
-                                                                    no_of_departments = len(response_dict["department_under_faculty_set"]), 
-                                                                    ffaculty = response_dict["faculty"]
-                                                                    )  
-    return generated_response
-
+    # possible_responses = [
+    #                     "There are {no_of_departments} departments under {ffaculty}.", 
+    #                     "{no_of_departments} departments are there under {ffaculty}."
+    #                     ]
+    # generated_response = (random.choice(possible_responses)).format(
+    #                                                                 no_of_departments = len(response_dict["department_under_faculty_set"]), 
+    #                                                                 ffaculty = response_dict["faculty"]
+    #                                                                 )  
+    # return generated_response
+    return "not processing this query right now"
 
 
 def format_response_number_of_colleges_offering_degree_degreetype_course(response_dict):
@@ -246,13 +247,13 @@ def format_response_list_of_programmes_at_college(response_dict):
     return generated_response 
 
 
-def format_response_list_of_courses_in_faculty(response_dict):
+def format_response_list_of_programmes_in_faculty(response_dict):
     pass
 
-def format_response_list_of_courses_in_department(response_dict):
+def format_response_list_of_programmes_in_department(response_dict):
     pass
 
-def format_response_list_of_courses_in_department_at_college(response_dict):
+def format_response_list_of_programmes_in_department_at_college(response_dict):
     pass
 
 def format_response_list_of_department_at_college(response_dict):
@@ -323,8 +324,8 @@ def format_response_coursefee_for_category_for_degree_degreetype_course_college(
 
 def format_response_details_for_eligibility_of_degree_degreetype_course(response_dict):
     possible_responses = [
-        "Get details regarding eligibility for {prgm} here:-\n", 
-        "Find eligibility details for {prgm} here at this link:- \n"
+        "Get details regarding eligibility for {prgm} here:-\n {link}", 
+        "Find eligibility details for {prgm} here at this link:- \n{link}"
         ]
     generated_response = (random.choice(possible_responses)).format(prgm = response_dict["programme"], 
                                                                     link = response_dict["link"] 
@@ -335,8 +336,9 @@ def format_response_details_for_eligibility_of_degree_degreetype_course(response
 
 def format_response_details_for_duration_of_degree_degreetype_course(response_dict):
     possible_responses = [
-        "Get details regarding programme duration forand other related details {prgm} here:-\n{link}", 
-        "Find duration and syllabus related details for {prgm} here at this link:- \n{link}"
+        "Get details regarding {prgm} duration and other related details here:-\n{link}", 
+        "Find duration and syllabus related details for {prgm} here at this link:- \n{link}",
+        "Get duration and related information for {prgm} here at this link:- \n{link}"
         ]
     generated_response = (random.choice(possible_responses)).format(prgm = response_dict["programme"], 
                                                                     link = response_dict["link"] 
@@ -346,8 +348,8 @@ def format_response_details_for_duration_of_degree_degreetype_course(response_di
 
 def format_response_details_for_syllabus_of_degree_degreetype_course(response_dict):
     possible_responses = [ 
-        "Get details regarding syllabus of {prgm} here:-\n", 
-        "Find syllabus related details for {prgm} here at this link:- \n"
+        "Get details regarding syllabus of {prgm} here:-\n{link}", 
+        "Find syllabus related details for {prgm} here at this link:- \n{link}"
         ]
     generated_response = (random.choice(possible_responses)).format(prgm = response_dict["programme"], 
                                                                     link = response_dict["link"] 

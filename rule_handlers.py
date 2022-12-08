@@ -160,18 +160,21 @@ def get_total_number_of_seats_for_degree_degreetype_course_at_college(query_dict
     course = query_dict['course'].lower()
 
     response_dict = dict()
-
+    print("yes1")
     if degree == "b.a." and degreetype == "program":
         for r in reader6:
-            if r[0]=="b.a." and r[1] == "program":
-                response_dict["link"] == r[2]
+            if r[0].strip()=="b.a." and r[1].strip() == "program":
+                response_dict["link"] == r[2].strip()
+                print("yes2")
+
     query_results = 0
     for row in reader5:
-        if row[0] == college and row[1] == degree and row[2]== degreetype and row[3]== course:
+        if row[0].strip() == college and row[1].strip() == degree and row[2].strip()== degreetype and row[3].strip()== course:
+            query_results = int(row[11].strip())
+            print(query_results)
             print("yes")
-            query_results = int(row[11])
-        else:
-            response_dict["programme_not_available_flag"] = True 
+    if query_results==0:
+        response_dict["programme_not_available_flag"] = True 
     
     response_dict["college"] = college
     response_dict["degree"] = degree
@@ -197,24 +200,28 @@ def get_number_of_seats_for_category_for_degree_degreetype_course_at_college(que
     category = query_dict['category'].lower()
 
     response_dict = dict()
-
+    response_dict["seats"] = 0
     if degree == "b.a." and degreetype == "program":
         for r in reader6:
-            if r[0]=="b.a." and r[1] == "program":
-                response_dict["link"] == r[2]
+            if r[0].strip()=="b.a." and r[1].strip() == "program":
+                response_dict["link"] == r[2].strip()
 
     # for i in range(11,17):
     category_index_from_csv = header5.index(category) + 8
-
+    # print(category_index_from_csv)
+    # query_results
     for row in reader5:
-        if row[0] == college and row[1] == degree and row[2] == degreetype and row[3] == course :
-            query_results = int(row[category_index_from_csv])
+        if (row[0].strip() == college ) and (row[1].strip() == degree )and (row[2].strip() == degreetype )and (row[3].strip() == course) :
+            # print("a")
+            response_dict["seats"] = row[category_index_from_csv]
+            print(response_dict["seats"])
 
     response_dict["college"] = college
-    
+    response_dict["degree"] = degree
+    response_dict["degreetype"] = degreetype
     response_dict["course"] = course
     response_dict["category"] = category
-    response_dict["seats"] = query_results
+    # response_dict["seats"] = query_results
 
     file_5.seek(0)
     next(reader5)
@@ -343,23 +350,23 @@ def get_number_of_department_under_faculty_at_college(query_dict):
 
 
 def get_number_of_department_under_faculty(query_dict):
-    faculty = query_dict['faculty']
+    # faculty = query_dict['faculty']
 
-    department_under_faculty_set = set()
-    for row in reader2:
-        if row[0].lower() == faculty.lower():
-            department_under_faculty_set.add(row[1].strip().title())    
+    # department_under_faculty_set = set()
+    # for row in reader2:
+    #     if row[0].lower() == faculty.lower():
+    #         department_under_faculty_set.add(row[1].strip().title())    
 
-    response_dict = dict()
+    # response_dict = dict()
 
-    response_dict["faculty"] = faculty
-    response_dict["department_under_faculty_set"] = department_under_faculty_set
+    # response_dict["faculty"] = faculty
+    # response_dict["department_under_faculty_set"] = department_under_faculty_set
 
-    file_2.seek(0)
-    next(reader2)
+    # file_2.seek(0)
+    # next(reader2)
 
-    return response_dict
-
+    # return response_dict
+    pass
 
 def get_number_of_colleges_offering_degree_degreetype_course(query_dict):
     # if query_dict['entity'] == 'college':
@@ -370,9 +377,10 @@ def get_number_of_colleges_offering_degree_degreetype_course(query_dict):
     colleges_offering_programme_set = set()
 
     for row in reader5:
-        if row[1] == degree and row[2] == degreetype and row[3] ==  course :
+        if row[1].strip() == degree and row[2].strip() == degreetype and row[3].strip() == course :
             colleges_offering_programme_set.add(row[0])
     
+    print(len(colleges_offering_programme_set))
     response_dict = dict()
     programme = "{} {} {}".format(degree.strip(),degreetype.strip(),course.strip()).title()
     response_dict["programme"] = programme
@@ -448,6 +456,7 @@ def get_list_of_programmes_in_university(query_dict):
         programme = row[1].strip() + " " + row[2].strip() + " " + row[3].strip() 
         programmes_set.add(programme.title())
 
+   
     response_dict = dict()
     response_dict["programmes_set"] = programmes_set
       
@@ -481,7 +490,7 @@ def get_list_of_programmes_at_college(query_dict):
 
 
 
-def get_list_of_courses_in_faculty(query_dict):
+def get_list_of_programmes_in_faculty(query_dict):
     # faculty = query_dict['faculty']    
 
     # path = "D:\\new_chat\\new_n\\faculty_course.csv"
@@ -505,7 +514,7 @@ def get_list_of_courses_in_faculty(query_dict):
     return (random.choice("data is not available", "data will be availavble soon ..."))
 
 
-def get_list_of_courses_in_department(query_dict):
+def get_list_of_programmes_in_department(query_dict):
     # department = query_dict['department']    
 
 
@@ -526,7 +535,7 @@ def get_list_of_courses_in_department(query_dict):
     return "data is not available"
 
 
-def get_list_of_courses_in_department_at_college(query_dict):
+def get_list_of_programmes_in_department_at_college(query_dict):
     # college level department
     # to be discussed college level detail 
     # college = query_dict['college']
@@ -572,21 +581,22 @@ def get_list_of_department_under_faculty_at_college(query_dict):
 
 
 def get_list_of_department_under_faculty(query_dict):
-    faculty = query_dict['faculty']
+    pass
+#     faculty = query_dict['faculty']
 
-    department_under_faculty_set = set()
-    for row in reader2:
-        if row[0].lower() == faculty.lower():
-            department_under_faculty_set.add(row[1].strip().title())    
+#     department_under_faculty_set = set()
+#     for row in reader2:
+#         if row[0].lower() == faculty.lower():
+#             department_under_faculty_set.add(row[1].strip().title())    
 
-    response_dict = dict()
-    response_dict["faculty"] = faculty
-    response_dict["department_under_faculty_set"] = department_under_faculty_set   
+#     response_dict = dict()
+#     response_dict["faculty"] = faculty
+#     response_dict["department_under_faculty_set"] = department_under_faculty_set   
 
-    file_2.seek(0)
-    next(reader2)
+#     file_2.seek(0)
+#     next(reader2)
 
-    return response_dict
+#     return response_dict
 
 
 def get_list_of_colleges_offering_degree_degreetype_course(query_dict):
@@ -597,7 +607,7 @@ def get_list_of_colleges_offering_degree_degreetype_course(query_dict):
     colleges_offering_programme_set = set()
 
     for row in reader5:
-        if row[1] == degree and row[2] == degreetype and row[3] ==  course :
+        if row[1].strip() == degree and row[2].strip() == degreetype and row[3].strip() ==  course :
             colleges_offering_programme_set.add(row[0])
     
     response_dict = dict()
@@ -631,10 +641,9 @@ def get_coursefee_for_category_for_degree_degreetype_course_college(query_dict):
     course = query_dict['course'].lower()
     category = query_dict['category'].lower()
 
-    category_index_from_csv = header4.index(category)
-
+    category_index_from_csv = header5.index(category)
     for row in reader5:
-        if row[0] == college and row[1] == degree and row[2] == degreetype and row[3] == course :
+        if row[0].strip() == college and row[1].strip() == degree and row[2].strip() == degreetype and row[3].strip() == course :
             query_results = int(row[category_index_from_csv])
 
     response_dict = dict()
@@ -658,8 +667,8 @@ def get_details_for_eligibility_of_degree_degreetype_course(query_dict):
     response_dict = dict()
 
     for row in reader6:
-        if row[0] == degree and row[1] == degreetype:
-            response_dict["link"] = row[2]
+        if row[0].strip() == degree and row[1].strip() == degreetype:
+            response_dict["link"] = row[2].strip()
     
     programme = "{} {} {}".format(degree.strip(), degreetype.strip(), course.strip()).title()
 
@@ -675,8 +684,8 @@ def get_details_for_duration_of_degree_degreetype_course(query_dict):
     response_dict = dict()
 
     for row in reader6:
-        if row[0] == degree and row[1] == degreetype:
-            response_dict["link"] = row[2]
+        if row[0].strip() == degree and row[1].strip() == degreetype:
+            response_dict["link"] = row[2].strip()
     
     programme = "{} {} {}".format(degree.strip(), degreetype.strip(), course.strip()).title()
     
@@ -694,7 +703,8 @@ def get_details_for_syllabus_of_degree_degreetype_course(query_dict):
 
     for row in reader6:
         if row[0] == degree and row[1] == degreetype:
-            response_dict["link"] = row[2]
+                print("yes")
+            response_dict["link"] = row[2].strip()
     
     programme = "{} {} {}".format(degree.strip(), degreetype.strip(), course.strip()).title()
     

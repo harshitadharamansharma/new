@@ -35,12 +35,12 @@ rulebase = {
     },
 
     7:  {  
-        "rule_format": "quantifier_seats_category_course_college",
+        "rule_format": "quantifier_seats_category_degree_degreetype_course_college",
         "rule_handler": get_number_of_seats_for_category_for_degree_degreetype_course_at_college,
         "response_formatter": format_response_number_of_seats_for_category_for_degree_degreetype_course_at_college
     },
     8:  {  
-        "rule_format": "quantifier_course_college",
+        "rule_format": "quantifier_programme_college",
         "rule_handler": get_number_of_programmes_at_college,
         "response_formatter": format_response_number_of_programmes_at_college
     },
@@ -102,29 +102,29 @@ rulebase = {
         "response_formatter": format_response_list_of_departments_in_university
     },
     20:  {  
-        "rule_format": "show_programmes",
+        "rule_format": "show_programme",
         "rule_handler": get_list_of_programmes_in_university,
         "response_formatter": format_response_list_of_programmes_in_university
     },
     21:  {  
-        "rule_format": "show_programmes_college",
+        "rule_format": "show_programme_college",
         "rule_handler": get_list_of_programmes_at_college,
         "response_formatter": format_response_list_of_programmes_at_college
     },
     22:  {  
-        "rule_format": "show_course_faculty",
-        "rule_handler": get_list_of_courses_in_faculty,
-        "response_formatter": format_response_list_of_courses_in_faculty
+        "rule_format": "show_programme_faculty",
+        "rule_handler": get_list_of_programmes_in_faculty,
+        "response_formatter": format_response_list_of_programmes_in_faculty
     },
     23:  {  
-        "rule_format": "show_course_department",
-        "rule_handler": get_list_of_courses_in_department,
-        "response_formatter": format_response_list_of_courses_in_department
+        "rule_format": "show_programme_department",
+        "rule_handler": get_list_of_programmes_in_department,
+        "response_formatter": format_response_list_of_programmes_in_department
     },
     24:  {  
-        "rule_format": "show_course_department_college",
-        "rule_handler": get_list_of_courses_in_department_at_college,
-        "response_formatter": format_response_list_of_courses_in_department_at_college
+        "rule_format": "show_programme_department_college",
+        "rule_handler": get_list_of_programmes_in_department_at_college,
+        "response_formatter": format_response_list_of_programmes_in_department_at_college
     },
     25:  {  
         "rule_format": "show_department_college",
@@ -157,24 +157,24 @@ rulebase = {
         "response_formatter": format_response_cutoff_for_degree_degreetype_course_for_college
     },
     31:  {  
-        "rule_format": "show_details_coursefee_category_degree_degreetype_course_college",
+        "rule_format": "show_coursefee_category_degree_degreetype_course_college",
         "rule_handler": get_coursefee_for_category_for_degree_degreetype_course_college,
         "response_formatter": format_response_coursefee_for_category_for_degree_degreetype_course_college
     },
     32:  {  
-        "rule_format": "show_details_eligibility_degree_degreetype_course",
+        "rule_format": "show_eligibility_degree_degreetype_course",
         "rule_handler": get_details_for_eligibility_of_degree_degreetype_course,
         "response_formatter": format_response_details_for_eligibility_of_degree_degreetype_course
     },
     33:  {  
-        "rule_format": "show_details_duration_degree_degreetype_course",
+        "rule_format": "show_duration_degree_degreetype_course",
         "rule_handler": get_details_for_duration_of_degree_degreetype_course,
         "response_formatter": format_response_details_for_duration_of_degree_degreetype_course
     },
     34:  {  
-        "rule_format": "show_details_syllabus_degree_degreetype_course",
+        "rule_format": "show_syllabus_degree_degreetype_course",
         "rule_handler": get_details_for_syllabus_of_degree_degreetype_course,
-        "response_formatter": format_response_details_for_duration_of_degree_degreetype_course
+        "response_formatter": format_response_details_for_syllabus_of_degree_degreetype_course
     }
     # ,
     # 35:  {  

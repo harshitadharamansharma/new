@@ -1,6 +1,7 @@
 import os
 import sys
 import re
+import keyboard
 from config import config
 from preprocessing import query_preprocessor
 from utils import bot_print, bot_print_with_name
@@ -45,9 +46,11 @@ def chat_init():
 
     continue_chat_flag = True
 
+    query = get_user_query(user_name)
+
     while continue_chat_flag == True :
         
-        query = get_user_query(user_name)
+        
         # keyword_classes = get_keyword_classes_from_query(query)
         # print(keyword_classes)
         preprocessed_query = query_preprocessor(query)
@@ -68,13 +71,13 @@ def chat_init():
 
         if 'degree' in keyword_classes_dictionary.keys() and 'degreetype' in keyword_classes_dictionary.keys() and 'course' not in keyword_classes_dictionary.keys():
             keyword_classes_dictionary['course'] = "d"
-            query_token_set.add(keyword_classes_dictionary['course'])
+            query_token_set.add('course')
 
         elif 'degree' in keyword_classes_dictionary.keys() and 'degreetype' not in keyword_classes_dictionary.keys() and 'course' not in keyword_classes_dictionary.keys():
             keyword_classes_dictionary['course'] = "d"
-            query_token_set.add(keyword_classes_dictionary['course'])  
+            query_token_set.add('course')  
             keyword_classes_dictionary['degreetype'] = "d"
-            query_token_set.add(keyword_classes_dictionary['degreetype'])
+            query_token_set.add('degreetype')
 
 
         print(keyword_classes_dictionary)
@@ -90,7 +93,9 @@ def chat_init():
             response_dict = best_match_rule(keyword_classes_dictionary)
             best_match_response_formatter = get_response_formatter(query_token_set)
             response = best_match_response_formatter (response_dict)
-            bot_input_with_name(response)      
+            bot_input_with_name(response) 
+
+        query = get_user_query(user_name)    
     return 0
 
 

@@ -6,14 +6,17 @@ from keyword_classes import keyword_classes
 from rulebase import rulebase
 import re
 import random
+import keyboard
 
 
 def bot_print(message):
-    print(config["TAB_WIDTH"] + message)
+    print(config["TAB_WIDTH"] + message + "\n")
+
 
 
 def bot_print_with_name(message):
-    print(config["BOT_NAME"].title() +  ": " +  message)
+    print(config["BOT_NAME"].title() +  ": " +  message + "\n")
+    # keyboard.press('enter')
 
 
 def bot_input_with_name(prompt):
@@ -79,6 +82,7 @@ def get_keyword_dictionary_from_query(query):
  
     shortlisted_keywords = []
     shortlisted_keyword_classes = []
+    query2_dict = dict()
  
     for key in list(synonyms.keys()):
         for kw in synonyms[key]:
@@ -86,11 +90,12 @@ def get_keyword_dictionary_from_query(query):
             # Find (" " + kw + " ") in lemmatized_query:
             if match_found != None:
                 shortlisted_keywords.append(key)
-   
+
     for sh_kw in shortlisted_keywords:
         for key in list(keyword_classes.keys()):
             if sh_kw in keyword_classes[key]:
                 shortlisted_keyword_classes.append(key)
+                query2_dict[key]=sh_kw
  
     # query_dict = {}
     # for key in shortlisted_keyword_classes:
@@ -98,9 +103,10 @@ def get_keyword_dictionary_from_query(query):
     #         query_dict[key] = value
     #         break
  
-    query_dict = dict(zip(shortlisted_keyword_classes,shortlisted_keywords))
-    print(query_dict)
-    return query_dict
+    # query_dict = dict(zip(shortlisted_keyword_classes,shortlisted_keywords))
+    # print(query_dict)
+    print("quey2_dict is = " + str(query2_dict))
+    return query2_dict
 
 
 
