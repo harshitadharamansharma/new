@@ -160,19 +160,26 @@ def get_total_number_of_seats_for_degree_degreetype_course_at_college(query_dict
     course = query_dict['course'].lower()
 
     response_dict = dict()
-    print("yes1")
+    response_dict["programme_not_available_flag"] = False
+    response_dict["link"] = str()
+    query_results = int()
+
+    # print("yes1")
     if degree == "b.a." and degreetype == "program":
         for r in reader6:
+            # print("yess")
             if r[0].strip()=="b.a." and r[1].strip() == "program":
-                response_dict["link"] == r[2].strip()
-                print("yes2")
+                response_dict["link"] = r[2].strip()
+        # print(response_dict["link"])
 
-    query_results = 0
-    for row in reader5:
-        if row[0].strip() == college and row[1].strip() == degree and row[2].strip()== degreetype and row[3].strip()== course:
-            query_results = int(row[11].strip())
-            print(query_results)
-            print("yes")
+    else:
+        query_results = 0
+        for row in reader5:
+            if row[0].strip() == college and row[1].strip() == degree and row[2].strip()== degreetype and row[3].strip()== course:
+                query_results = int(row[11].strip())
+                print(query_results)
+                print("yes")
+
     if query_results==0:
         response_dict["programme_not_available_flag"] = True 
     
@@ -180,7 +187,7 @@ def get_total_number_of_seats_for_degree_degreetype_course_at_college(query_dict
     response_dict["degree"] = degree
     response_dict["degreetype"] = degreetype
     response_dict["course"] = course
-    response_dict["total seats"] = query_results
+    response_dict["total seats"] = str(query_results)
 
     file_5.seek(0)
     next(reader5)
@@ -703,7 +710,7 @@ def get_details_for_syllabus_of_degree_degreetype_course(query_dict):
 
     for row in reader6:
         if row[0] == degree and row[1] == degreetype:
-                print("yes")
+            print("yes")
             response_dict["link"] = row[2].strip()
     
     programme = "{} {} {}".format(degree.strip(), degreetype.strip(), course.strip()).title()

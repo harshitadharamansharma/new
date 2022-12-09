@@ -60,6 +60,10 @@ def format_response_total_number_of_seats_for_degree_degreetype_course_at_colleg
     generated_response = str()
     if response_dict["programme_not_available_flag"] == True:
         generated_response == "This Programme is not available in this college."
+    
+    elif len(response_dict["link"]) != 0:    # we are getting response_dict["link"] from the rule_handler when degree  == "B.A." and degreetype == "honours".
+        generated_response = "Number of seats for B.A. Program may vary according the comination of courses selected for this degree. You can find related retales by following this link : {link}".format(link = response_dict["link"])
+
     else:
         possible_responses = [
         "There are {total_no_of_seats} total seats in {dg} {dt} {crs} at {clg}", 
