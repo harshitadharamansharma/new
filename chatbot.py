@@ -8,6 +8,9 @@ from utils import bot_print, bot_print_with_name
 from utils import bot_input_with_name, user_input_with_name
 from utils import get_keyword_classes_from_query, get_keyword_dictionary_from_query
 from utils import get_best_match_rule, invalid_query_prompt, get_response_formatter
+from utils import get_rule_with_max_token_score
+from utils import get_query_token_set
+
 # from rule_handlers import *
 
 def show_greeting():
@@ -50,7 +53,6 @@ def chat_init():
 
     while continue_chat_flag == True :
         
-        
         # keyword_classes = get_keyword_classes_from_query(query)
         # print(keyword_classes)
         preprocessed_query = query_preprocessor(query)
@@ -59,33 +61,18 @@ def chat_init():
             sys.exit(0)
 
         keyword_classes_dictionary = get_keyword_dictionary_from_query(preprocessed_query)
-        print(keyword_classes_dictionary)
+        # print(keyword_classes_dictionary)
         # call_rulehandler(keyword_dictionary)
 
-        query_token_set = set(keyword_classes_dictionary.keys())
-
-        if 'entity' in keyword_classes_dictionary.keys():    
-            query_token_set.add(keyword_classes_dictionary['entity'])
-            query_token_set.remove('entity')
         
-
-        if 'degree' in keyword_classes_dictionary.keys() and 'degreetype' in keyword_classes_dictionary.keys() and 'course' not in keyword_classes_dictionary.keys():
-            keyword_classes_dictionary['course'] = "d"
-            query_token_set.add('course')
-
-        elif 'degree' in keyword_classes_dictionary.keys() and 'degreetype' not in keyword_classes_dictionary.keys() and 'course' not in keyword_classes_dictionary.keys():
-            keyword_classes_dictionary['course'] = "d"
-            query_token_set.add('course')  
-            keyword_classes_dictionary['degreetype'] = "d"
-            query_token_set.add('degreetype')
-
-
+        query_token_set = get_query_token_set(keyword_classes_dictionary)
         print(keyword_classes_dictionary)
         print(query_token_set)
 
         best_match_rule = get_best_match_rule(query_token_set)
- 
         #this will return rule_handler function
+        # print(get_rule_with_max_token_score(query_token_set), "get_rule_with_max_token_score")
+        #check token scores 
 
         if best_match_rule == str(-1): 
             invalid_query_prompt() 

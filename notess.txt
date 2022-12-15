@@ -1,0 +1,105 @@
+- checkpoints; (whether the user has provided all the details needed to process the query or should it ask call invalid_query_prompt()(concept of fallback message))
+- checkpoints (Does this course exist in the university; does this course available in the in this college)  ...............................level 2:- show related courses
+- slot filling :- based on the 2 types of scores we are assigning to all the rules 
+    - and for acheicving that; does it need s to store the last conversation(s)
+    
+
+- Scores :- 2 types of scores (max_token_score: number of tokens occured in an input message matched with a keyword classes in every rule_format) and 
+ (max_length_score: string lenght of the values we are getting from keyword class; basically lenght of the appened string of query_token_set) 
+ will be given to all the rules ; based on the slots values we are getting  (keyword - classes)
+
+
+- scores or prioritizing the slots if occured together in the  same conversation; based on the combination of keyword class whose chances of occuring in an input message (Conversation) :- for example " what nuber of seats" so here what is used for the list ; but number is for quantifiers; hence the user intent for "number" will have a greater periority then the what
+ Since we have limited number of possible intents and limited number of occurance hence we can acheive it seems feasible to define a score system for these rules.. is it  so?
+
+
+- existing libraries for tackling spelling errors and or use synoyms (KIM: lemmatizers are already there)
+  if so then need to create a spell checker kind of system to tackle similar course name or degree name    (Journalism or hindi journalism) it will consider hindi instead hindi journalism  (prioritizing system) based on our data or previous enquiries?
+
+
+- and (quanifier in or show in keyw())degree programme not in"entity"
+
+if there are na seats tackle to answer na in the master data 
+
+- eleminate extra keywords based on the token classes 
+ eleminate extra information ( keywords ) based on the rule with max score we are getting from the dictionary returned by get_rule_with_max_token_score()
+ for example number of colleges offering ba honours hindi sc  here sc is of no use but we are not able to call the rule for rule format: show_college_degree_degreetype_course
+ a different priority set file and a different college entity file for and a file slot possible slot filling functions 
+
+ Don't forget
+ - Program and Programme
+ - "D" in the master data :-  take care about the output in the data ; change ith rule_handler funvtion accordingly
+
+Can I get the details regarding This course
+- asking for course details and get answers(specific or link or both )
+can I know ; Can I get 
+
+waf where you have to check the availability of a group of keyword classes in you query_set 
+
+
+
+# Checkpoint :- this course_ degree_degreetype combo // the programme is not availabblke in the university 
+# if this course available in this ccollege     done 
+# only degree is providede; degreetype or course is missing   
+
+
+#37
+def format_response_number_of_programme_under_degree_degreetype(response_dict):
+
+    possible_responses = [
+        "There are {no_of_programmes} programmes of under {degree} degree and {degreetype} degreetype.", 
+        "{no_of_programmes} programmes are there under {degree} degree and {degreetype} degreetype."
+        ]
+    generated_response = (random.choice(possible_responses)).format(no_of_departments = len(response_dict["programme_set"]), 
+                                                                    degree = response_dict["degree"],
+                                                                    degree = response_dict["degreetype"] 
+                                                                    )  
+
+    return generated_response
+
+
+#38
+def format_response_list_of_programme_under_degree_degreetype(response_dict):
+    serial_no = 1
+    final_output_list = ''
+    for i in response_dict["programme_set"]:
+        a = "\n" + str(serial_no)+ ". " + i 
+        final_output_list += a
+        serial_no += 1
+
+    possible_responses = [
+        "There are {no_of_programmes} programmes under {degree} degree and {degreetype} degreetype.\nHere is the list :- \n{s}", 
+        "{no_of_programmes} programmes are there under {degree} degree and {degreetype} degreetype.\nHere is the list :- \n{s}"
+        ]
+    generated_response = (random.choice(possible_responses)).format(no_of_departments = len(response_dict["programme_set"]), 
+                                                                    degree = response_dict["degree"],
+                                                                    degree = response_dict["degreetype"], 
+                                                                    s = final_output_list
+                                                                    )  
+
+    return generated_response
+
+utils get_query_token_set
+
+# dg dt crs
+
+# # dg dt 
+#         if 'degree' in keyword_classes_dictionary.keys() and 'degreetype' in keyword_classes_dictionary.keys() and 'course' not in keyword_classes_dictionary.keys():
+#             keyword_classes_dictionary['course'] = "d"
+#             query_token_set.add('course')
+
+# # dg
+#         elif 'degree' in keyword_classes_dictionary.keys() and 'degreetype' not in keyword_classes_dictionary.keys() and 'course' not in keyword_classes_dictionary.keys():
+#             keyword_classes_dictionary['course'] = "d"
+#             query_token_set.add('course')  
+#             keyword_classes_dictionary['degreetype'] = "d"
+#             query_token_set.add('degreetype')
+
+# # dg  crs
+#         elif 'degree' in keyword_classes_dictionary.kenys() and 'degreetype' not in keyword_classes_dictionary.keys() and 'course' in keyword_classes_dictionary.keys():
+#             keyword_classes_dictionary['degreetype'] = "d"
+#             query_token_set.add('degreetype')
+
+# '''OR AS SEPERATE FUNCTION TO SILL THE '''s
+            # if ('degree' in keyword_classes_dictionary.keys()) and ( 'quantifier' in keyword_classes_dictionary.keys() or 'show' in keyword_classes_dictionary.keys() ): 
+    

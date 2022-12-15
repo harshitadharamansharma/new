@@ -13,7 +13,6 @@ def bot_print(message):
     print(config["TAB_WIDTH"] + message + "\n")
 
 
-
 def bot_print_with_name(message):
     print(config["BOT_NAME"].title() +  ": " +  message + "\n")
     # keyboard.press('enter')
@@ -70,9 +69,7 @@ def get_keyword_classes_from_query(query):
                 shortlisted_keyword_classes.append(key) 
 
     return shortlisted_keyword_classes
-
-
-
+    
 
 
 def get_keyword_dictionary_from_query(query):
@@ -105,8 +102,38 @@ def get_keyword_dictionary_from_query(query):
  
     # query_dict = dict(zip(shortlisted_keyword_classes,shortlisted_keywords))
     # print(query_dict)
-    print("quey2_dict is = " + str(query2_dict))
+    # print("quey2_dict is = " + str(query2_dict))
     return query2_dict
+
+
+def get_query_token_set(keyword_classes_dictionary):
+    
+    query_token_set = set(keyword_classes_dictionary.keys())
+
+    if  'quantifier' in keyword_classes_dictionary.keys() or 'show' in keyword_classes_dictionary.keys() : 
+        
+        if 'entity' in keyword_classes_dictionary.keys():    
+            query_token_set.add(keyword_classes_dictionary['entity'])
+            query_token_set.remove('entity')
+               
+            # if ('degree' in keyword_classes_dictionary.keys()) and ('programme' not in keyword_classes_dictionary.values()):
+            if 'degree' in query_token_set and 'programme' not in query_token_set:
+                
+                if 'degreetype' in keyword_classes_dictionary.keys() and 'course' not in keyword_classes_dictionary.keys():
+                    keyword_classes_dictionary['course'] = "d"
+                    query_token_set.add('course')
+
+                elif 'degreetype' not in keyword_classes_dictionary.keys() and 'course' not in keyword_classes_dictionary.keys():
+                    keyword_classes_dictionary['course'] = "d"
+                    query_token_set.add('course')  
+                    keyword_classes_dictionary['degreetype'] = "d"
+                    query_token_set.add('degreetype')
+
+                elif 'degreetype' not in keyword_classes_dictionary.keys() and 'course' in keyword_classes_dictionary.keys():
+                    keyword_classes_dictionary['degreetype'] = "d"
+                    query_token_set.add('degreetype')
+            
+    return query_token_set    
 
 
 
@@ -147,3 +174,68 @@ def do_you_mean_this_prompt():
     pass
 
 
+# def check_programme_exists():
+#    pass
+
+
+def get_rule_with_max_token_score(query_set):
+
+    final_rule_token_score_dict = dict()
+    max_token_score = 0
+
+    for rule in rulebase:
+        rule_format_set = set(str(rulebase[rule]["rule_format"]).split("_"))
+        rule_token_score = 0
+
+
+        for token in query_set:
+            if token in rule_format_set :
+                rule_token_score += 1
+            # print(rule_token_score)
+        # max_token_score = max(max_token_score, rule_token_score)
+        if max_token_score < rule_token_score:
+            max_token_score = rule_token_score
+            rule_with_max_score = rulebase[rule]["rule_handler"]
+    # print(max_token_score, "ok")
+
+    if max_token_score == 0:
+        return str(-1)
+    final_rule_token_score_dict["rule"] = rule_with_max_score 
+    final_rule_token_score_dict["score"] = max_token_score
+
+    return final_rule_token_score_dict
+
+
+
+'''This was to count the length of the appended list of the elemnts present in the query_token_set or query_set'''
+# def get_rule_with_max_length_score(query_set):
+
+#     final_rule_length_score_dict = dict()
+#     max_token_score = 0
+
+#     for rule in rulebase:
+#         rule_format_set = set(str(rulebase[rule]["rule_format"]).split("_"))
+#         rule_token_score = 0
+
+
+#         for token in query_set:
+#             if token in rule_format_set :
+#                 rule_token_score += 1
+#             # print(rule_token_score)
+#         # max_token_score = max(max_token_score, rule_token_score)
+#         if max_token_score < rule_token_score:
+#             max_token_score = rule_token_score
+#             rule_with_max_score = rulebase[rule]["rule_handler"]
+#     # print(max_token_score, "ok")
+
+#     if max_token_score == 0:
+#         return str(-1)
+#     final_rule_length_score_dict["rule"] = rule_with_max_score 
+#     final_rule_length_score_dict["score"] = max_token_score
+
+#     return final_rule_length_score_dict 
+    
+     
+
+# Checkpoints :- define checkpoint rules
+# rule score then ask for slot filling

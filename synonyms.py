@@ -3,21 +3,25 @@ synonyms = {
     # "BSc": ["bsc", "bachelor of sciences", "bachelor of science", "B Sc"," ],
     # "BA": ["ba", "bachelor of arts", "bachelor of art", "b a"],
 
-    
+
+    "Number": ["number", "quanity", "quantifier", "how many", "the number of"],  # "what are the no.", , "what are",  "what are the number", "what is", "get me the number", 
+    "Show": ["show", "list", "names", "name", "what", " what are", "name the", "list the", "how much"], # , "details"
+    # "details": ["eligibility", "syllabus", "duration"],
+   
+    "eligibility":["eligibility", "prerequisite", "eligible", "eligibil"],
+    "syllabus":["syllabus", "syllabi", "course content", "subject", "subjects"], 
+    "duration":["duration", "time period", ],
+
+    "UR": ["general", "genr", "gen", "general", "ur", "unreserved"],
+    "SC": ["sc", "scheduled cast", "scheduled caste", "schedule cast", "schedule caste"],
+    "ST": ["st", "scheduled tribe", "scheduled trib", "schedule tribe", "schedule trib"],
+    "EWS": ["ews", "economically weaker section", "financially weaker class", "weaker class", "financially weaker section", "economically poor section", "economically poor class"],
+    "OBC": ["obc", "other backward class" ,"economically backward class" ,"backward class"],
+    "Minority": ["minority"],
+    "PWD": ["pwd"],
 
     "Economics": ["economics", "economic", "economy"],
     "History": ["history"],
-    "Number": ["number" , "how many", "how much", "what are the number", "what are the no.", "get me the number"],
-    "Show": ["show", "list", "details", "names", "name", "what", " what are", "name the", "list the"], #why plural we are using the lem and for spell
-
-
-    "General": ["genr", "gen", "general", "ur", "unreserved"],
-    "SC": ["sc", "scheduled cast", "scheduled caste", "schedule cast", "schedule caste"],
-    "ST": ["st", "scheduled tribe", "scheduled trib", "schedule tribe", "schedule trib"],
-    "EWS": ["economically weaker section", "ews", "financially weaker class", "weaker class", "financially weaker section", "economically poor section", "economically poor class"],
-    "OBC": ["obc", "other backward class" ,"economically backward class" ,"backward class"],
-    "Minority": ["minority"],
-
     "Hindi": ["hindi"], 
     "English": ["english"],
     "Sanskrit": ["sanskrit"],
@@ -35,7 +39,7 @@ synonyms = {
     "management and marketing of insurance":["management and marketing of insurance"],
     "chemistry":["chemistry"],
     "human resource management":["human resource management"],
-    # "link":["link"],
+
     "history":["history"],
     "physical science with computer science":["physical science with computer science"],
     "zoology":["zoology"],
@@ -60,12 +64,12 @@ synonyms = {
     "social work":["social work"],
     "sanskrit":["sanskrit"],
     "physical science with chemistry":["physical science with chemistry"],
-    "hindi journalism":["hindi journalism"],
+    "hindi journalism":["hindi journalism", "journalism in hindi"],
     "political science":["political science"],
     "electronics":["electronics"],
     "instrumentation":["instrumentation"],
     "computer  science":["computer  science"],
-    "d":["d"],
+    # "d":["d"], "link" : ["link"]
     "office management and secretarial practice":["office management and secretarial practice"],
     "journalism":["journalism"],
     "life sciences":["life sciences"],
@@ -85,9 +89,9 @@ synonyms = {
     "Bhagini Nivedita College": ["bhagini nivedita college", "bhagini navedita college", "BNC"],
     "Bharati College": ["bharati college", "bharti", "bhrti", "bhaarti", "bhaarati college", "bharati"],
     "Daulat Ram College": ["daulat ram college", "drm", "daulat ram", "daulat", "dolat ram", "daulat raam"],
-    "Bhaskaracharya College Of Applied Sciences": ["bhaskaracharya college of applied sciences", "bcas", "bhaskaracharya", "bhaskarcharya", "bhaskaracharya college of applied science", "bhaskaracharya college of sciences", "bhaskaracharya science college"],
+    "Bhaskaracharya College Of Applied Sciences": ["bhaskaracharya college of applied sciences", "bcas", "bhaskaracharya", "bhaskarcharya", "bhaskaracharya college of applied science", "bhaskaracharya college of sciences", "bhaskaracharya science college", "b.c.a.s"],
     "College Of Vocational Studies": ["college of vocational studies", "cvs", "vocational studies college", "college vocational studies", "college of vocational study"],
-    "Deen Dayal Upadhyaya College": ["deen dayal upadhyaya college", "dduc", "deen dayal college", "deen dyal college", "deen dyal upadhyaya college", "deen dyal upadhya college"],
+    "Deen Dayal Upadhyaya College": ["deen dayal upadhyaya college", "dduc", "deen dayal college", "deen dyal college", "deen dyal upadhyaya college", "deen dyal upadhya college", "ddu"],
 
     # "Faculty of Arts": ["Faculty of Arts",],
     # "Faculty of Applied Social Sciences and Humanities": ["Faculty of Applied Social Sciences and Humanities", "applied social sciences and humanities"],
@@ -110,7 +114,7 @@ synonyms = {
     "faculty": ["faculty", "faclty", "faculty"], 
     "department": ["department", "dept", "deprtmnt", "departments", "department"], 
     "college": ["clg", "college", "colleg", "collg", "college"],
-    "course" : ["course", "crse", "courses", "corse"], 
+    "course": ["course", "crse", "courses", "corse"], 
     "seats": ["seats", "seat", "sts"], 
     "category": ["categry", "catgory", "categories", "category"], 
     "eligibility": ["eligibility", "elgblity", "eligible", "elagabale", "elgible"], 
@@ -193,10 +197,11 @@ synonyms = {
     "B.COM.": ["bcom", "bachelor of commerce", "b.com.", "b com","b.com"], 
     "B.VOC.": ["bvoc", "bachelor of vocational studies", "bachelor of vocational study", "b.voc.", "b voc"], 
     "B.J.": ["bj", "bachelor of journalism", "b.j.", "b j"],
-    "B.TECH.": ["b.tech."],
+    "B.TECH.": ["b.tech.", "b.tech"],
     "honours": ["honours", "(H)", "honors", "hons", "honor", "honour"], 
     "program": ["program", "prog"], 
     "pass": ["pass"],
-    "vocational studies": [],
+    "vocational studies": ["vocational studies"],
     "programme": ["programme"]
+    
 }
