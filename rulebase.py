@@ -218,6 +218,7 @@ rulebase = {
         "rule_handler": get_list_of_programme_under_degree_degreetype,
         "response_formatter": format_response_list_of_programme_under_degree_degreetype
  }
+ 
 
 
 }

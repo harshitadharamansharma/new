@@ -235,6 +235,20 @@ def get_rule_with_max_token_score(query_set):
 
 #     return final_rule_length_score_dict 
     
+def get_max_length_from_response(keyword_classes_dictionary):
+
+    string_query_token = str()
+    for a in keyword_classes_dictionary.values():
+        # print(a)
+        string_query_token = string_query_token.join(a.strip())
+        # print(a)
+    max_token_score = len(string_query_token)
+    # print(max_token_score )
+
+    return max_token_score
+
+
+     
      
 
 # Checkpoints :- define checkpoint rules

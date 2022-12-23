@@ -9,7 +9,7 @@ from utils import bot_input_with_name, user_input_with_name
 from utils import get_keyword_classes_from_query, get_keyword_dictionary_from_query
 from utils import get_best_match_rule, invalid_query_prompt, get_response_formatter
 from utils import get_rule_with_max_token_score
-from utils import get_query_token_set
+from utils import get_query_token_set, get_max_length_from_response
 
 # from rule_handlers import *
 
@@ -69,7 +69,11 @@ def chat_init():
         print(keyword_classes_dictionary)
         print(query_token_set)
 
+        max_length_score = get_max_length_from_response(keyword_classes_dictionary)
+        # print(max_length_score)
+        
         best_match_rule = get_best_match_rule(query_token_set)
+
         #this will return rule_handler function
         # print(get_rule_with_max_token_score(query_token_set), "get_rule_with_max_token_score")
         #check token scores 
