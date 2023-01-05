@@ -103,3 +103,18 @@ utils get_query_token_set
 # '''OR AS SEPERATE FUNCTION TO SILL THE '''s
             # if ('degree' in keyword_classes_dictionary.keys()) and ( 'quantifier' in keyword_classes_dictionary.keys() or 'show' in keyword_classes_dictionary.keys() ): 
     
+
+
+
+    bINARY QUESTIONS :
+replying either YEs or NO
+
+and suggesting further questions with same number of intent 
+    FOR example:-
+
+    Is this programme available in this college?
+
+in the graph 
+degree degreetype course
+
+POS tagging

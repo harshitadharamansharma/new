@@ -180,32 +180,86 @@ def do_you_mean_this_prompt():
 
 def get_rule_with_max_token_score(query_set):
 
-    final_rule_token_score_dict = dict()
-    max_token_score = 0
+        final_rule_token_score_dict = dict()
+        max_token_score = 0
 
+        for rule in rulebase:
+            rule_format_set = set(str(rulebase[rule]["rule_format"]).split("_"))
+            rule_token_score = 0
+
+            for token in query_set:
+                if token in rule_format_set :
+                    rule_token_score += 1
+                # print(rule_token_score)
+            # max_token_score = max(max_token_score, rule_token_score)
+            
+            if max_token_score < rule_token_score:
+                max_token_score = rule_token_score
+                rule_with_max_score = rulebase[rule]["rule_handler"]
+        # print(max_token_score, "ok")
+
+        if max_token_score == 0:
+            return str(-1)
+            return str('No rule matched')
+
+        final_rule_token_score_dict["rule"] = rule_with_max_score 
+        final_rule_token_score_dict["score"] = max_token_score
+
+        return final_rule_token_score_dict
+
+#def get_rule_with_max_token_score(query_set):
+
+'''   rule_score_dict = dict()
+    has_required_tokens = True
+    rule_with_max_token_score = dict()
+    
     for rule in rulebase:
         rule_format_set = set(str(rulebase[rule]["rule_format"]).split("_"))
         rule_token_score = 0
 
-
         for token in query_set:
             if token in rule_format_set :
                 rule_token_score += 1
-            # print(rule_token_score)
-        # max_token_score = max(max_token_score, rule_token_score)
-        if max_token_score < rule_token_score:
-            max_token_score = rule_token_score
-            rule_with_max_score = rulebase[rule]["rule_handler"]
-    # print(max_token_score, "ok")
+        
+        if rule_token_score == 0:
+                has_required_tokens = False
 
-    if max_token_score == 0:
-        return str(-1)
-    final_rule_token_score_dict["rule"] = rule_with_max_score 
-    final_rule_token_score_dict["score"] = max_token_score
+        rule_score_percentage = 100*(float(rule_token_score) / float(len(rule_format_set)))
 
-    return final_rule_token_score_dict
+        # for token in query_set:
+        #     if token not in rule_format_set:
+        #         has_required_tokens = False
+        #         break
 
+        if has_required_tokens == True:
+            rule_score_dict[rule] = rule_score_percentage
+        else:
+            rule_score_dict[rule] = 0
 
+    for rule, score in rule_score_dict.items():        
+        print(rule,":",score)
+
+    number_of_rules_with_same_max_score = 0
+
+    for rule, score in rule_score_dict.items():
+        max_score_found = max(rule_score_dict.values())
+        if score is max_score_found and max_score_found != 0:
+            print("Rule number with max score is : \"", str(rule), "\" with score: ", score)
+            number_of_rules_with_same_max_score += 1 
+            rule_with_max_token_score["rule_number"] = rule
+            rule_with_max_token_score["score"] = score
+            rule_with_max_token_score["rule"] = rulebase[rule]["rule_handler"]
+            print(str(rule_with_max_token_score["rule"]))
+        else:
+            rule_with_max_token_score["rule"]
+
+    print("there is/are ", str(number_of_rules_with_same_max_score), "with max score")
+
+    if number_of_rules_with_same_max_score > 1:
+        pass
+
+    return rule_with_max_token_score
+'''
 
 '''This was to count the length of the appended list of the elemnts present in the query_token_set or query_set'''
 # def get_rule_with_max_length_score(query_set):
@@ -247,7 +301,7 @@ def get_max_length_from_response(keyword_classes_dictionary):
 
     return max_token_score
 
-
+# def 
      
      
 

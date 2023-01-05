@@ -1,14 +1,8 @@
 
-from rule_handlers import *
-from response_formatter import *
-
-
-rulebase = {
-    1: {
         "rule_format": "quantifier_college" ,
         "rule_handler": get_number_of_colleges_in_university,
         "response_formatter": format_response_number_of_colleges_in_university
-    },
+
     2: {
         "rule_format": "quantifier_faculty",
         "rule_handler": get_number_of_faculties_in_university,
@@ -218,18 +212,14 @@ rulebase = {
     39: {
         "rule_format": "availability_programme_college",
         "rule_handler": get_availability_of_programme_in_college,
-        "response_formatter": format_response_for_availability_of_programme_in_college
+        "response_formatter": format_response_for_availability_of_programme_in_college       
 },
     40: {
         "rule_format": "availability_degree_college",
         "rule_handler": get_availability_of_degree_in_college,
         "response_formatter": format_response_for_availability_of_degree_in_college
 },
-    41: {
+    41: 
         "rule_format": "availability_degree_degreetype_college",
         "rule_handler": get_availability_of_degree_degreetype_in_college,
         "response_formatter": format_response_for_availability_of_degreetype_degree_in_college
-}
- 
-
-}

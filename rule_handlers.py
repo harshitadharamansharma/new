@@ -501,8 +501,9 @@ def get_list_of_departments_in_university(query_dict):
 def get_list_of_programmes_in_university(query_dict):
     programmes_set = set()
     for row in reader5:
-        programme = "{} {} {}".format(row[1].strip().title(),row[2].strip().lower(),row[3].strip().title())
+        programme = "{} {} {}".format(row[1].strip().title(),row[2].strip().lower() if row[2].strip().lower() != "d" else "",row[3].strip().title()  if row[3].strip().title() != "D" else "")
         programmes_set.add(programme.title())
+        # programme = "{} {} {}".format(degree.strip().title(),degreetype.strip().lower() if degreetype != "d" else "",course.strip().title() if course != "d" else "")
 
    
     response_dict = dict()
@@ -521,7 +522,8 @@ def get_list_of_programmes_at_college(query_dict):
 
     for row in reader5:
         if row[0] == college:
-            programme = "{} {} {}".format(row[1].strip().title(),row[2].strip().lower(),row[3].strip().title())
+            # programme = "{} {} {}".format(row[1].strip().title(),row[2].strip().lower(),row[3].strip().title())
+            programme = "{} {} {}".format(row[1].strip().title(),row[2].strip().lower() if row[2].strip().lower() != "d" else "",row[3].strip().title()  if row[3].strip().title() != "D" else "")
             if programme not in programmes_at_college_set:
                 programmes_at_college_set.append(programme)
 
@@ -660,7 +662,7 @@ def get_list_of_colleges_offering_degree_degreetype_course(query_dict):
             colleges_offering_programme_set.add(row[0])
     
     response_dict = dict()
-    programme = "{} {} {}".format(degree.strip().title(),degreetype.strip().lower() if degreetype != "d" else "",course.strip().title() if course != "d" else "")
+    programme = "{} {} {}".format(degree.strip().title(), degreetype.strip().lower() if degreetype != "d" else "",course.strip().title() if course != "d" else "")
     response_dict["programme"] = programme
     response_dict["colleges_offering_programme_set"] = colleges_offering_programme_set
 
@@ -771,19 +773,19 @@ def get_details_for_degree_degreetype_course(query_dict):
     
     response_dict = dict()
 
-    for row in reader5:
-        if row[1].strip() == degree and row[2].strip() == degreetype:
+    for row in reader6:
+        if row[0].strip() == degree and row[1].strip() == degreetype:
             response_dict["link"] = row[2].strip()
     
     # programme = "{} {} {}".format(degree.strip().title(), degreetype.strip().lower(), course.strip().title())
     programme = "{} {} {}".format(degree.strip().title(),degreetype.strip().lower() if degreetype != "d" else "",course.strip().title() if course != "d" else "")
 
-    
+    # print(response_dict["link"])  
     response_dict["programme"] = programme 
     response_dict["details"] = query_dict["details"]           
     
-    file_5.seek(0)
-    next(reader5)
+    file_6.seek(0)
+    next(reader6)
     
     return response_dict 
 
@@ -922,4 +924,14 @@ def get_list_of_programme_under_degree_degreetype(query_dict):
     
     return response_dict  
 
+#39
+def get_availability_of_programme_in_college(query_dict):
+    pass
     
+#40
+def get_availability_of_degree_in_college(query_dict):
+    pass
+
+#41
+def get_availability_of_degree_degreetype_in_college(query_dict):
+    pass

@@ -2,9 +2,6 @@ synonyms = {
 
     # "BSc": ["bsc", "bachelor of sciences", "bachelor of science", "B Sc"," ],
     # "BA": ["ba", "bachelor of arts", "bachelor of art", "b a"],
-
-    "pass": ["pass"],
-    "vocational studies": ["vocational studies"],
     "Number": ["number", "quanity", "quantifier", "how many", "the number of"],  # "what are the no.", , "what are",  "what are the number", "what is", "get me the number", 
     "Show": ["show", "list", "names", "name", "what", " what are", "name the", "list the", "how much"], # , "details"
     # "details": ["eligibility", "syllabus", "duration"],
@@ -202,7 +199,11 @@ synonyms = {
     "honours": ["honours", "(H)", "honors", "hons", "honor", "honour"], 
     "program": ["program", "prog"], 
 
-    "programme": ["programme"]
+    "programme": ["programme"],
+    
+    "pass": ["pass"],
+    "vocational studies": ["vocational studies"]
+    
     # "harshita": ["harshita", "harsh", "harshi"]
     
 }

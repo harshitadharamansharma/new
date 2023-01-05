@@ -12,7 +12,7 @@ import random
 #1
 def format_response_number_of_colleges_in_university(response_dict):
     possible_responses = [
-        "There are {no_of_colleges} offering Undergraduate courses at the university", 
+        "There are {no_of_colleges} colleges offering Undergraduate courses at the university", 
         "There are {no_of_colleges} colleges affiliated by the University." 
         ]
     generated_response = (random.choice(possible_responses)).format(no_of_colleges = response_dict["no_of_college"])  
@@ -259,7 +259,7 @@ def format_response_list_of_programmes_at_college(response_dict):
         "{no_of_courses} programmes / courses are there at {clg}.\n Here is the list of programmes / courses available at {clg} at DU:- \n{s}"
         ]
     generated_response = (random.choice(possible_responses)).format(
-                                                                    no_of_courses = response_dict["programme_set"], 
+                                                                    no_of_courses = len(response_dict["programme_set"]), 
                                                                     clg = response_dict["college"], 
                                                                     s = final_output_list 
                                                                     )  
@@ -506,5 +506,15 @@ def format_response_list_of_programme_under_degree_degreetype(response_dict):
 
     return generated_response
 
+#39
+def format_response_for_availability_of_programme_in_college(query_dict):
+    pass
 
+#40
+def format_response_for_availability_of_degree_in_college(query_dict):
+    pass
+
+#41 
+def format_response_for_availability_of_degreetype_degree_in_college(query_dict):
+    pass
 

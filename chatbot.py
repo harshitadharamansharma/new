@@ -75,18 +75,32 @@ def chat_init():
         best_match_rule = get_best_match_rule(query_token_set)
 
         #this will return rule_handler function
-        # print(get_rule_with_max_token_score(query_token_set), "get_rule_with_max_token_score")
+        
+# '''        
+#         rule_with_max_score_dict = get_rule_with_max_token_score(query_token_set)
+#         rule_with_max_score = rule_with_max_score_dict["rule"]
+# '''
+
+        rule_with_max_score_dict = get_rule_with_max_token_score(query_token_set)
+        rule_with_max_score = rule_with_max_score_dict["rule"]
+        
+        #, "get_rule_with_max_token_score")
         #check token scores 
 
         if best_match_rule == str(-1): 
-            invalid_query_prompt() 
+            
+            invalid_query_prompt()
+            # query = get_user_query(user_name) 
+
         else:
-            response_dict = best_match_rule(keyword_classes_dictionary)
+            # response_dict = best_match_rule(keyword_classes_dictionary)
+            response_dict = rule_with_max_score(keyword_classes_dictionary)
             best_match_response_formatter = get_response_formatter(query_token_set)
             response = best_match_response_formatter (response_dict)
             bot_input_with_name(response) 
 
-        query = get_user_query(user_name)    
+        query = get_user_query(user_name)
+
     return 0
 
 
