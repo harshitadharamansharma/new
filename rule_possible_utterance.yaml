@@ -3,17 +3,14 @@
         "rule_handler": get_number_of_colleges_in_university,
         "response_formatter": format_response_number_of_colleges_in_university
 
-    2: {
         "rule_format": "quantifier_faculty",
         "rule_handler": get_number_of_faculties_in_university,
         "response_formatter": format_response_number_of_faculties_in_university
-    },
-    3: {
+
         "rule_format": "quantifier_department",
         "rule_handler": get_number_of_departments_in_university,
         "response_formatter": format_response_number_of_departments_in_university
-    },
-    4:  {  
+ 
         "rule_format": "quantifier_programme",  #_programme
         "rule_handler": get_number_of_programmes_in_university,
         "response_formatter": format_response_number_of_programmes_in_university

@@ -207,24 +207,27 @@ def get_rule_with_max_token_score(query_set):
 
         return final_rule_token_score_dict
 
-#def get_rule_with_max_token_score(query_set):
+'''def get_rule_with_max_token_score(query_set):
 
-'''   rule_score_dict = dict()
+    rule_token_score_dict = dict()
+    rule_lenght_score_dict = dict()
     has_required_tokens = True
     rule_with_max_token_score = dict()
     
     for rule in rulebase:
         rule_format_set = set(str(rulebase[rule]["rule_format"]).split("_"))
         rule_token_score = 0
+        lenght_of_query_in_rule = 0
 
         for token in query_set:
             if token in rule_format_set :
                 rule_token_score += 1
-        
+                lenght_of_query_in_rule += len(token)
+                
         if rule_token_score == 0:
                 has_required_tokens = False
 
-        rule_score_percentage = 100*(float(rule_token_score) / float(len(rule_format_set)))
+        rule_token_score_percentage = 100*(float(rule_token_score) / float(len(rule_format_set)))
 
         # for token in query_set:
         #     if token not in rule_format_set:
@@ -232,34 +235,46 @@ def get_rule_with_max_token_score(query_set):
         #         break
 
         if has_required_tokens == True:
-            rule_score_dict[rule] = rule_score_percentage
+            rule_token_score_dict[rule] = rule_token_score_percentage
+            rule_lenght_score_dict[rule] = lenght_of_query_in_rule
         else:
-            rule_score_dict[rule] = 0
+            rule_token_score_dict[rule] = 0
+            rule_lenght_score_dict[rule] = 0
 
-    for rule, score in rule_score_dict.items():        
+    for rule, score in rule_token_score_dict.items():        
         print(rule,":",score)
 
     number_of_rules_with_same_max_score = 0
 
-    for rule, score in rule_score_dict.items():
-        max_score_found = max(rule_score_dict.values())
+    for rule, score in rule_token_score_dict.items():
+        max_score_found = max(rule_token_score_dict.values())
         if score is max_score_found and max_score_found != 0:
             print("Rule number with max score is : \"", str(rule), "\" with score: ", score)
             number_of_rules_with_same_max_score += 1 
-            rule_with_max_token_score["rule_number"] = rule
-            rule_with_max_token_score["score"] = score
-            rule_with_max_token_score["rule"] = rulebase[rule]["rule_handler"]
+            rule_with_max_token_score[number_of_rules_with_same_max_score]["rule_number"] = rule
+            rule_with_max_token_score[number_of_rules_with_same_max_score]["score"] = score
+            rule_with_max_token_score[number_of_rules_with_same_max_score]["rule"] = rulebase[rule]["rule_handler"]
+            rule_with_max_token_score[number_of_rules_with_same_max_score]["rule_format_set"] = set(str(rulebase[rule]["rule_format"]).split("_"))
+            rule_with_max_token_score[number_of_rules_with_same_max_score]["response_formatter"] = rulebase[rule]["response_formatter"]
             print(str(rule_with_max_token_score["rule"]))
         else:
             rule_with_max_token_score["rule"]
 
     print("there is/are ", str(number_of_rules_with_same_max_score), "with max score")
 
-    if number_of_rules_with_same_max_score > 1:
-        pass
+    # if number_of_rules_with_same_max_score > 1:
+    #     max_lenght = 0
+    #     # max_token_lenght = max(len(rule_with_max_token_score[]["rule_format_set"]))
+    #     for r in rule_with_max_token_score:
+    #         if max_lenght >= r[number_of_rules_with_same_max_score]["rule_format_set"]:
+    #             max_lenght = rule_token_score_dict
+    #             rule_with_max_lenght = rule_formet_set
+    #         else:
+    #         # max_lenght = max(max_lenght, rule_lenght_score_dict[r])
+    #             rule_with_max_lenght = 
 
-    return rule_with_max_token_score
-'''
+    return rule_with_max_token_score'''
+
 
 '''This was to count the length of the appended list of the elemnts present in the query_token_set or query_set'''
 # def get_rule_with_max_length_score(query_set):
